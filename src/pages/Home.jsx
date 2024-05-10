@@ -1,70 +1,44 @@
-import React, { useState } from 'react';
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import React from "react";
+import Navbar from './elements/Navbar.jsx';
 import {
-  Menu,
-  MenuHandler,
-  MenuList,
-  MenuItem,
-  Button,
+  Card,
+  CardHeader,
+  CardBody,
+  Typography,
+  Avatar,
 } from "@material-tailwind/react";
 
-const Navbar = () => {
-  // State to manage the navbar's visibility
-  const [nav, setNav] = useState(false);
-
-  // Toggle function to handle the navbar's display
-  const handleNav = () => {
-    setNav(!nav);
-  };
-
-  // Array containing navigation items
-  const navItems = [
-    { id: 1, text: 'Home' },
-    { id: 2, text: 'About Me' },
-    { id: 3, text: 'Skills' },
-    { id: 4, text: 'Contact' },
-  ];
-
+function StarIcon() {
   return (
-    <div className='bg-[#082f49] flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white'>
-      {/* Logo */}
-      <h1 className='w-full text-3xl font-bold'>Giorgio Pagani</h1>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="h-5 w-5 text-yellow-700"
+    >
+      <path
+        fillRule="evenodd"
+        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+}
 
-      {/* Desktop Navigation */}
-      <ul className='hidden md:flex'>
-        {navItems.map(item => (
-          <li
-            key={item.id}
-            className='p-4 hover:bg-[#00df9a] rounded-xl m-2 cursor-pointer duration-300 hover:text-black'
-          >
-            {item.text}
-          </li>
-        ))}
-      </ul>
+const Home = () => {
+  return (
+    <>
+      <Navbar/>
 
-      {/* Mobile Navigation Icon */}
-      <div onClick={handleNav} className='block md:hidden'>
-        {nav ? <AiOutlineClose size={25} /> : 
-        <Menu>
-          <MenuHandler>
-            <Button><AiOutlineMenu size={25}/></Button>
-          </MenuHandler>
-          <MenuList>
-            {navItems.map(item => (
-              <MenuItem
-                key={item.id}
-              >
-                {item.text}
-              </MenuItem>
-            ))}
-
-          </MenuList>
-        </Menu>
-        }
-      </div>
-      
-    </div>
+      <Card color="transparent" shadow={false} className="w-1/2">
+      <CardBody className="mb-6 pl-20 text-white pt-20">
+        <strong className="text-white text-6xl">I'm Giorgio Pagani</strong>
+        <br/>
+        <strong className="text-[#fde047] text-5xl">Full-Stack Developer</strong>
+      </CardBody>
+    </Card>
+    </>
   );
 };
 
-export default Navbar;
+export default Home;
