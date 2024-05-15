@@ -36,7 +36,7 @@ const Nav = () => {
         className={`nav-item ${activeLink === "Home" && "active"}`}
         onClick={() => handleLinkClick("Home")}
       >
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex items-center font-bold">
           Home
         </a>
       </Typography>
@@ -47,7 +47,7 @@ const Nav = () => {
         className={`nav-item ${activeLink === "About Me" && "active"}`}
         onClick={() => handleLinkClick("About Me")}
       >
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex items-center font-bold">
           About Me
         </a>
       </Typography>
@@ -58,7 +58,7 @@ const Nav = () => {
         className={`nav-item ${activeLink === "Progetti" && "active"}`}
         onClick={() => handleLinkClick("Progetti")}
       >
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex items-center font-bold">
           Progetti
         </a>
       </Typography>
@@ -69,7 +69,7 @@ const Nav = () => {
         className={`nav-item ${activeLink === "Skills" && "active"}`}
         onClick={() => handleLinkClick("Skills")}
       >
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex items-center font-bold">
           Skills
         </a>
       </Typography>
@@ -80,7 +80,7 @@ const Nav = () => {
         className={`nav-item ${activeLink === "Contact" && "active"}`}
         onClick={() => handleLinkClick("Contact")}
       >
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex items-center font-bold">
           Contact
         </a>
       </Typography>
@@ -94,9 +94,10 @@ const Nav = () => {
           <Typography
             as="a"
             href="#"
-            className="ml-3 cursor-pointer py-1.5 font-medium"
+            className="ml-3 cursor-pointer py-1.5 font-medium font-bold"
           >
-            Giorgio Pagani
+            <span className="text-[#3b83bd]">G</span>
+            P
           </Typography>
           <div className="flex items-center gap-4">
             <div className="hidden lg:block">{navList}</div>
