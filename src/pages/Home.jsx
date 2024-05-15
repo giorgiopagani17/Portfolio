@@ -13,7 +13,7 @@ const Home = () => {
   const [typedText, setTypedText] = useState('');
   const [index, setIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
-  const delay = 100; // Tempo di pausa tra ogni carattere (in millisecondi)
+  const delay = 100; 
   const fullText = "Full-Stack Developer";
   const [hoveredIcon, setHoveredIcon] = useState(null);
   const [isDownloadHovered, setIsDownloadHovered] = useState(false);
@@ -58,7 +58,7 @@ const Home = () => {
           clearInterval(typeInterval);
           setTimeout(() => {
             setIsTyping(false);
-          }, 1000); // Tempo di pausa prima di cancellare il testo (in millisecondi)
+          }, 1100); 
         }
       } else {
         if (index > 0) {

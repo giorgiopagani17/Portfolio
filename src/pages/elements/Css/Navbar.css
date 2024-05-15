@@ -21,11 +21,11 @@
   .nav-item a {
     position: relative;
     display: inline-block;
-    transition: transform 0.3s ease; /* Aggiungi una transizione per l'effetto di scorrimento */
+    transition: transform 0.3s ease; 
   }
   
   .nav-item a:hover {
-    transform: translateY(-2px); /* Effetto di sollevamento */
+    transform: translateY(-2px); 
   }
   
   

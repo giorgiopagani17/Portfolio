@@ -5,7 +5,7 @@ import {
   Typography,
   IconButton,
 } from "@material-tailwind/react";
-import "./Css/Navbar.css"; // Importa il file CSS per le animazioni
+import "./Css/Navbar.css"; 
 
 const Nav = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -17,7 +17,7 @@ const Nav = () => {
   };
 
   const handleResize = () => {
-    if (window.innerWidth > 768) { // Imposta 768 come larghezza limite per il mobile
+    if (window.innerWidth > 768) { 
       setOpenNav(false);
     }
   };
