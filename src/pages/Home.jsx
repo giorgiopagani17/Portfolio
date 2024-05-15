@@ -6,8 +6,7 @@ import {
 } from "@material-tailwind/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faDownload } from '@fortawesome/free-solid-svg-icons';
 import "./elements/Css/Home.css";
 
 const Home = () => {
@@ -16,6 +15,37 @@ const Home = () => {
   const [isTyping, setIsTyping] = useState(true);
   const delay = 100; // Tempo di pausa tra ogni carattere (in millisecondi)
   const fullText = "Full-Stack Developer";
+  const [hoveredIcon, setHoveredIcon] = useState(null);
+  const [isDownloadHovered, setIsDownloadHovered] = useState(false);
+
+  const handleIconMouseEnter = (iconName) => {
+    setHoveredIcon(iconName);
+  };
+
+  const handleIconMouseLeave = () => {
+    setHoveredIcon(null);
+  };
+
+  const handleClick = (url) => {
+    window.open(url, "_blank");
+  };
+
+  const handleEmailClick = () => {
+    const email = "giorgio.pagani2003@gmail.com";
+    const subject = "Ti contatto dal tuo sito Portfolio!";
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+    window.open(mailtoLink);
+  };
+
+  const handleDownloadClick = () => {
+    const url = '/cv.pdf';
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', 'cv_giorgiopagani');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   useEffect(() => {
     const typeInterval = setInterval(() => {
@@ -53,12 +83,51 @@ const Home = () => {
             <p><strong className="text-white text-6xl">I'm Giorgio Pagani</strong></p>
             <p style={{marginTop:'1%'}}><strong id="text" className="text-[#3b83bd] text-5xl">{typedText}</strong></p>
             <p style={{marginTop:'1%', marginBottom:'1%'}}>Sono uno sviluppatore web</p>
-            <FontAwesomeIcon icon={faInstagram} beatFade size="2xl" style={{ color: "#ffffff", marginRight:'2%', cursor:'pointer' }} />
-            <FontAwesomeIcon icon={faLinkedin} beatFade size="2xl" style={{ color: "#ffffff", marginRight:'2%', cursor:'pointer' }} />
-            <FontAwesomeIcon icon={faGithub} beatFade size="2xl" style={{ color: "#ffffff", marginRight:'2%', cursor:'pointer' }} />
-            <FontAwesomeIcon icon={faEnvelope} beatFade size="2xl" style={{ color: "#ffffff", cursor:'pointer' }} />
+            <FontAwesomeIcon 
+              icon={faInstagram} 
+              size="2xl" 
+              beatFade
+              style={{ color: hoveredIcon === 'instagram' ? "#3b83bd" : "#ffffff", marginRight:'2%', cursor:'pointer' }} 
+              onClick={() => handleClick("https://www.instagram.com/_giorgiopagani_/")} 
+              onMouseEnter={() => handleIconMouseEnter('instagram')} 
+              onMouseLeave={handleIconMouseLeave} 
+            />
+            <FontAwesomeIcon 
+              icon={faLinkedin} 
+              size="2xl" 
+              beatFade
+              style={{ color: hoveredIcon === 'linkedin' ? "#3b83bd" : "#ffffff", marginRight:'2%', cursor:'pointer' }} 
+              onClick={() => handleClick("https://www.linkedin.com/in/giorgio-pagani-5ab4b42b1/")} 
+              onMouseEnter={() => handleIconMouseEnter('linkedin')} 
+              onMouseLeave={handleIconMouseLeave} 
+            />
+            <FontAwesomeIcon 
+              icon={faGithub} 
+              size="2xl"
+              beatFade
+              style={{ color: hoveredIcon === 'github' ? "#3b83bd" : "#ffffff", marginRight:'2%', cursor:'pointer' }} 
+              onClick={() => handleClick("https://github.com/giorgiopagani17")} 
+              onMouseEnter={() => handleIconMouseEnter('github')} 
+              onMouseLeave={handleIconMouseLeave} 
+            />
+            <FontAwesomeIcon 
+              icon={faEnvelope} 
+              size="2xl"
+              beatFade 
+              style={{ color: hoveredIcon === 'email' ? "#3b83bd" : "#ffffff", cursor:'pointer' }} 
+              onClick={handleEmailClick} 
+              onMouseEnter={() => handleIconMouseEnter('email')} 
+              onMouseLeave={handleIconMouseLeave} 
+            />
             <br/>
-            <button style={{backgroundColor:"#3b83bd", color:'white', borderRadius:'20px', padding: '1%', marginTop:'1%'}}>Download Cv <FontAwesomeIcon icon={faDownload} bounce size="sm" style={{ color: "#ffffff"}}/></button>
+            <button 
+              onClick={handleDownloadClick} 
+              style={{backgroundColor:"#3b83bd", color:'white', borderRadius:'20px', padding: '1%', marginTop:'1%'}}
+              onMouseEnter={() => setIsDownloadHovered(true)} 
+              onMouseLeave={() => setIsDownloadHovered(false)} 
+            >
+              Download Cv <FontAwesomeIcon icon={faDownload} size="sm" style={{ color: "#ffffff", animation: isDownloadHovered ? "bounce 1s infinite" : "none", transition: "transform 0.2s ease-in-out"}} />
+            </button>
           </CardBody>
         </Card>
         <img src="web.png"/>
