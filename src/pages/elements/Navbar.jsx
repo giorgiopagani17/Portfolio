@@ -6,13 +6,22 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import "./Css/Navbar.css"; 
+import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
   const [openNav, setOpenNav] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
+  const navigate = useNavigate();
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
+
+    if(link == "home"){
+      navigate("/");
+    } else {
+      navigate("/" + link);
+    }
+
     setOpenNav(false);
   };
 
@@ -33,8 +42,8 @@ const Nav = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className={`nav-item ${activeLink === "Home" && "active"}`}
-        onClick={() => handleLinkClick("Home")}
+        className={`nav-item ${activeLink === "home" && "active"}`}
+        onClick={() => handleLinkClick("home")}
       >
         <a href="#" className="flex items-center font-bold">
           Home
@@ -44,19 +53,19 @@ const Nav = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className={`nav-item ${activeLink === "About Me" && "active"}`}
-        onClick={() => handleLinkClick("About Me")}
+        className={`nav-item ${activeLink === "about" && "active"}`}
+        onClick={() => handleLinkClick("about")}
       >
         <a href="#" className="flex items-center font-bold">
-          About Me
+          About
         </a>
       </Typography>
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
-        className={`nav-item ${activeLink === "Progetti" && "active"}`}
-        onClick={() => handleLinkClick("Progetti")}
+        className={`nav-item ${activeLink === "progetti" && "active"}`}
+        onClick={() => handleLinkClick("progetti")}
       >
         <a href="#" className="flex items-center font-bold">
           Progetti
@@ -66,8 +75,8 @@ const Nav = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className={`nav-item ${activeLink === "Skills" && "active"}`}
-        onClick={() => handleLinkClick("Skills")}
+        className={`nav-item ${activeLink === "skills" && "active"}`}
+        onClick={() => handleLinkClick("skills")}
       >
         <a href="#" className="flex items-center font-bold">
           Skills
@@ -77,8 +86,8 @@ const Nav = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className={`nav-item ${activeLink === "Contact" && "active"}`}
-        onClick={() => handleLinkClick("Contact")}
+        className={`nav-item ${activeLink === "contact" && "active"}`}
+        onClick={() => handleLinkClick("contact")}
       >
         <a href="#" className="flex items-center font-bold">
           Contact
@@ -88,7 +97,7 @@ const Nav = () => {
   );
 
   return (
-    <div className="max-h-[768px] w-[100%] ">
+    <div className="max-h-[768px] w-[100%]">
       <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none border-none px-4 py-2 lg:px-8 lg:py-4">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography

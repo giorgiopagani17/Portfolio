@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Navbar from './elements/Navbar.jsx';
 import {
   Card,
   CardBody,
@@ -76,9 +75,8 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
-        <Card color="transparent" shadow={false} className="w-1/2">
+      <div className="flex items-center justify-center min-h-screen gap-x-80" style={{ marginTop: '-8vh' }}>
+        <Card color="transparent" shadow={false}>
           <CardBody className="mb-6 pl-5 text-white">
             <p><strong className="text-white text-6xl">I'm Giorgio Pagani</strong></p>
             <p style={{marginTop:'1%'}}><strong id="text" className="text-[#3b83bd] text-5xl">{typedText}</strong></p>
@@ -87,7 +85,7 @@ const Home = () => {
               icon={faInstagram} 
               size="2xl" 
               beatFade
-              style={{ color: hoveredIcon === 'instagram' ? "#3b83bd" : "#ffffff", marginRight:'2%', cursor:'pointer' }} 
+              style={{ color: hoveredIcon === 'instagram' ? "#3b83bd" : "#ffffff", marginRight:'5%', cursor:'pointer' }} 
               onClick={() => handleClick("https://www.instagram.com/_giorgiopagani_/")} 
               onMouseEnter={() => handleIconMouseEnter('instagram')} 
               onMouseLeave={handleIconMouseLeave} 
@@ -96,7 +94,7 @@ const Home = () => {
               icon={faLinkedin} 
               size="2xl" 
               beatFade
-              style={{ color: hoveredIcon === 'linkedin' ? "#3b83bd" : "#ffffff", marginRight:'2%', cursor:'pointer' }} 
+              style={{ color: hoveredIcon === 'linkedin' ? "#3b83bd" : "#ffffff", marginRight:'5%', cursor:'pointer' }} 
               onClick={() => handleClick("https://www.linkedin.com/in/giorgio-pagani-5ab4b42b1/")} 
               onMouseEnter={() => handleIconMouseEnter('linkedin')} 
               onMouseLeave={handleIconMouseLeave} 
@@ -105,7 +103,7 @@ const Home = () => {
               icon={faGithub} 
               size="2xl"
               beatFade
-              style={{ color: hoveredIcon === 'github' ? "#3b83bd" : "#ffffff", marginRight:'2%', cursor:'pointer' }} 
+              style={{ color: hoveredIcon === 'github' ? "#3b83bd" : "#ffffff", marginRight:'5%', cursor:'pointer' }} 
               onClick={() => handleClick("https://github.com/giorgiopagani17")} 
               onMouseEnter={() => handleIconMouseEnter('github')} 
               onMouseLeave={handleIconMouseLeave} 
@@ -120,17 +118,18 @@ const Home = () => {
               onMouseLeave={handleIconMouseLeave} 
             />
             <br/>
-            <button 
+            <button className="text-white mt-5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               onClick={handleDownloadClick} 
-              style={{backgroundColor:"#3b83bd", color:'white', borderRadius:'20px', padding: '1%', marginTop:'1%'}}
               onMouseEnter={() => setIsDownloadHovered(true)} 
               onMouseLeave={() => setIsDownloadHovered(false)} 
             >
-              Download Cv <FontAwesomeIcon icon={faDownload} size="sm" style={{ color: "#ffffff", animation: isDownloadHovered ? "bounce 1s infinite" : "none", transition: "transform 0.2s ease-in-out"}} />
+              Download Cv <FontAwesomeIcon icon={faDownload} size="sm" className="ml-2" style={{ color: "#ffffff", animation: isDownloadHovered ? "bounce 1s infinite" : "none", transition: "transform 0.2s ease-in-out"}} />
             </button>
           </CardBody>
         </Card>
-        <img src="web.png"/>
+        <div>
+          <img src="web.png"/>
+        </div>
       </div>
     </>
   );
