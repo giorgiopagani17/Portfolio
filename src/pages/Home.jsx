@@ -82,7 +82,7 @@ const Home = () => {
           <CardBody className="mb-6 pl-5 text-white">
             <p><strong className="text-white text-6xl">I'm Giorgio Pagani</strong></p>
             <p style={{marginTop:'1%'}}><strong id="text" className="text-[#3b83bd] text-5xl">{typedText}</strong></p>
-            <p style={{marginTop:'1%', marginBottom:'1%'}}>Sono uno sviluppatore web</p>
+            <p style={{marginTop:'1%', marginBottom:'1%'}}>Sono un full-stack developer specializzato in React e Python</p>
             <FontAwesomeIcon 
               icon={faInstagram} 
               size="2xl" 
