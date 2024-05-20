@@ -187,7 +187,7 @@ const Contact = () => {
                     </div>
                     <div className="mb-6 pl-5 text-white">
                         <p><strong className="text-[#3b83bd] text-6xl">Contattami:</strong></p>
-                        <p className="text-xl mt-10">Compila il modulo alla tua destra per contattarmi, <br/> verrai ricontattato il prima possibile!</p>
+                        <p className="text-xl mt-10">Compila il modulo qui sotto per contattarmi, <br/> verrai ricontattato il prima possibile!</p>
                         <div className="mt-10">
                             <FontAwesomeIcon 
                                 icon={faInstagram} 
