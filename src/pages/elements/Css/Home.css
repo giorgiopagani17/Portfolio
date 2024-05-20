@@ -1,56 +1,63 @@
 #text {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: .15em solid transparent;
-    animation: typing 3s steps(30, end), blink-caret .5s step-end infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid transparent;
+  animation: typing 3s steps(30, end), blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
   }
-  
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
+  to {
+    width: 100%;
   }
-  
-  @-webkit-keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
   }
-  
-  @keyframes blink-caret {
-    from,
-    to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: #3b83bd;
-    }
+  to {
+    width: 100%;
   }
-  
-  @-webkit-keyframes blink-caret {
-    from,
-    to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: #3b83bd;
-    }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
   }
-  
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-10px);
-    }
-    60% {
-      transform: translateY(-5px);
-    }
+  50% {
+    border-color: #3b83bd;
   }
+}
+
+@-webkit-keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #3b83bd;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+button:focus {
+  outline: none!important;
+  box-shadow: none!important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)!important;
+  background-color: #286699!important;
+}
