@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
   const [openNav, setOpenNav] = useState(false);
-  const [activeLink, setActiveLink] = useState("Home");
+  const [activeLink, setActiveLink] = useState("home");
   const navigate = useNavigate();
 
   const handleLinkClick = (link) => {
