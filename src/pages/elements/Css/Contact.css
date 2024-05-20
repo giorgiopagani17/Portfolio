@@ -32,7 +32,7 @@ textarea::placeholder{
 textarea{
     color: #3b83bd!important;
 }
-button:focus {
+#button:focus {
     outline: none!important;
     box-shadow: none!important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)!important;
