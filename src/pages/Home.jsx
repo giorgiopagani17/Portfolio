@@ -75,7 +75,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen gap-x-80" style={{ marginTop: '-8vh' }}>
+      <div className="flex items-center justify-center min-h-screen gap-x-[10%]" style={{ marginTop: '-8vh' }}>
         <Card color="transparent" shadow={false}>
           <CardBody className="mb-6 pl-5 text-white">
             <p><strong className="text-white text-6xl">I'm Giorgio Pagani</strong></p>

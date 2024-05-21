@@ -91,7 +91,7 @@ const Contact = () => {
     return (
         <>
             {isMobile ? (
-                <div className="flex flex-col-reverse min-h-screen gap-x-80" >
+                <div className="flex flex-col-reverse min-h-screen gap-x-[10%]]" >
                     <div className="mb-6 pl-5 w-96">
                         <form className="max-w-sm mx-auto" onSubmit={handleSubmit}>
                             <label htmlFor="email" className="mt-5 block mb-2 text-base font-medium text-gray-900 dark:text-white">Email</label>
@@ -230,7 +230,7 @@ const Contact = () => {
                     </div>
                 </div>
             ) : (
-                <div className="flex items-center justify-center min-h-screen gap-x-80" style={{ marginTop: '-8vh' }}>
+                <div className="flex items-center justify-center min-h-screen gap-x-[15%]" style={{ marginTop: '-8vh' }}>
                     <div className="mb-6 pl-5 text-white">
                         <p><strong className="text-[#3b83bd] text-6xl">Contattami:</strong></p>
                         <p className="text-xl mt-10">Compila il modulo alla tua destra per contattarmi, <br/> verrai ricontattato il prima possibile!</p>
