@@ -17,7 +17,7 @@ const Skills = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="text-center mt-20 text-[#3b83bd] text-6xl">
+      <div className="text-center mt-20 text-white text-6xl">
         <strong>My Skills</strong>
       </div>
       <div className="flex">
