@@ -1,0 +1,31 @@
+#icon:hover {
+    transform: translateY(-5px);
+    transition: transform 0.2s ease-in-out; 
+  }
+#icon {
+    cursor: pointer;
+}
+  
+#link {
+    position: relative;
+    text-decoration: none;
+  }
+  
+  #link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; 
+    background-color: #3b83bd; 
+    transition: width 0.3s ease; 
+  }
+  
+  #link:hover::before {
+    width: 100%;
+  }
+
+  #active{
+    border-bottom: 2px solid #3b83bd;
+  }
