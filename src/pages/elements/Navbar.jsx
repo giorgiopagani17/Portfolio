@@ -39,57 +39,57 @@ const Nav = () => {
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-20">
       <Typography
+        id={`${activeLink === "home" ? "active" : "link"}`}
         as="li"
         variant="small"
         color="blue-gray"
-        className={`nav-item ${activeLink === "home" && "active"}`}
         onClick={() => handleLinkClick("home")}
       >
-        <a href="#" className="flex items-center font-bold">
+        <a href="#" className="flex items-center font-bold text-base">
           Home
         </a>
       </Typography>
       <Typography
+        id={`${activeLink === "about" ? "active" : "link"}`}
         as="li"
         variant="small"
         color="blue-gray"
-        className={`nav-item ${activeLink === "about" && "active"}`}
         onClick={() => handleLinkClick("about")}
       >
-        <a href="#" className="flex items-center font-bold">
+        <a href="#" className="flex items-center font-bold text-base">
           About
         </a>
       </Typography>
       <Typography
+        id={`${activeLink === "progetti" ? "active" : "link"}`}
         as="li"
         variant="small"
         color="blue-gray"
-        className={`nav-item ${activeLink === "progetti" && "active"}`}
         onClick={() => handleLinkClick("progetti")}
       >
-        <a href="#" className="flex items-center font-bold">
+        <a href="#" className="flex items-center font-bold text-base">
           Progetti
         </a>
       </Typography>
       <Typography
+        id={`${activeLink === "skills" ? "active" : "link"}`}
         as="li"
         variant="small"
         color="blue-gray"
-        className={`nav-item ${activeLink === "skills" && "active"}`}
         onClick={() => handleLinkClick("skills")}
       >
-        <a href="#" className="flex items-center font-bold">
+        <a href="#" className="flex items-center font-bold text-base">
           Skills
         </a>
       </Typography>
       <Typography
+        id={`${activeLink === "contact" ? "active" : "link"}`}
         as="li"
         variant="small"
         color="blue-gray"
-        className={`nav-item ${activeLink === "contact" && "active"}`}
         onClick={() => handleLinkClick("contact")}
       >
-        <a href="#" className="flex items-center font-bold">
+        <a href="#" className="flex items-center font-bold text-base">
           Contact
         </a>
       </Typography>
@@ -98,12 +98,12 @@ const Nav = () => {
 
   return (
     <div className="max-h-[768px] w-[100%]">
-      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none border-none px-4 py-2 lg:px-8 lg:py-4">
+      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none border-none px-4 py-2 lg:px-8 lg:py-4 bg-[#0a054a]">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
             href="#"
-            className="ml-3 cursor-pointer py-1.5 font-medium font-bold"
+            className="ml-3 cursor-pointer py-1.5 font-medium font-bold text-base"
           >
             <span className="text-[#3b83bd]">G</span>
             P
@@ -112,7 +112,7 @@ const Nav = () => {
             <div className="hidden lg:block">{navList}</div>
             <IconButton
               variant="text"
-              className="mt-[-3vh] ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+              className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
               ripple={false}
               onClick={() => setOpenNav(!openNav)}
             >
