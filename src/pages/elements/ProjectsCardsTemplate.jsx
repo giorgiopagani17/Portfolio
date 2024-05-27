@@ -12,8 +12,8 @@ const Card = ({ title, content, image, tech1, techimage1, tech2, techimage2, tec
   };
 
   return (
-    <div className="bg-white border border-gray-300 rounded-lg shadow-md p-4 m-2 w-96">
-      <img src={image}/>
+    <div className="bg-white border border-gray-300 rounded-lg shadow-md p-4 m-2 w-96 h-[52vh]">
+      <img src={image} className="h-46"/>
       <h3 className="text-3xl text-[#3b83bd] font-bold mb-2 mt-3">{title}</h3>
       <div className='flex items-center justify-center mt-3'>
         <span className='flex justify-center items-center mr-3 border border-[#3b83bd] pl-2 pr-2 rounded-lg'><img src={techimage1} className='h-4 mr-1'/>{tech1}</span>
@@ -21,7 +21,7 @@ const Card = ({ title, content, image, tech1, techimage1, tech2, techimage2, tec
         <span className='flex justify-center items-center border border-[#3b83bd] pl-2 pr-2 rounded-lg'><img src={techimage3} className='h-4 mr-1'/>{tech3}</span>
       </div>
       <p className="text-gray-700 mt-3">{content}</p>
-      <div className='mt-3'>
+      <div>
       <button
         id="button"
         className="mr-2 text-white text-base mt-5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-2.5 py-2 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 relative"
