@@ -4,6 +4,7 @@ import Contact from './pages/Contact.jsx';
 import Navbar from './pages/elements/Navbar.jsx';
 import Skills from './pages/Skills.jsx';
 import Projects from './pages/Projects.jsx';
+import About from './pages/About.jsx';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/progetti" element={<Projects />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </Router>
     </div>

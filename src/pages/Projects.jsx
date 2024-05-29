@@ -6,14 +6,13 @@ import Card from './elements/ProjectsCardsTemplate';
 import Marquee from 'react-fast-marquee';
 
 const Projects = () => {
-  const [isPaused, setIsPaused] = useState(false); // State to control pause
-
+  const [isPaused, setIsPaused] = useState(false); 
   const handleMarqueeHover = () => {
-    setIsPaused(true); // Pause Marquee on hover
+    setIsPaused(true); 
   };
 
   const handleMarqueeLeave = () => {
-    setIsPaused(false); // Resume Marquee when leaving hover
+    setIsPaused(false); 
   };
 
   return (
