@@ -129,11 +129,11 @@ const Skills = () => {
                         <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
                             <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
                             <div className="flex items-center justify-center h-full">
-                                <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" />
+                                <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png" />
                             </div>
                             </div>
-                            <p>Git</p>
-                            <p className="text-sm text-[#3b83bd]">Intermediate</p>
+                            <p>Java</p>
+                            <p className="text-sm text-[#3b83bd]">Base</p>
                         </div>
                         </div>
                     )}
@@ -199,7 +199,17 @@ const Skills = () => {
                             <p>PostMan</p>
                             <p className="text-sm text-[#3b83bd]">Advanced</p>
                         </div>
-        
+                        
+                        <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
+                            <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
+                            <div className="flex items-center justify-center h-full">
+                                <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" />
+                            </div>
+                            </div>
+                            <p>Git</p>
+                            <p className="text-sm text-[#3b83bd]">Intermediate</p>
+                        </div>
+                        
                         <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
                             <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
                             <div className="flex items-center justify-center h-full">
