@@ -68,7 +68,7 @@ const Projects = () => {
                   <strong className="pb-2 text-center text-base text-[#3b83bd]">
                     Web Development
                   </strong>
-                  <p className="text-sm text-center">Post Diploma</p>
+                  <p className="text-sm text-center">Diploma ITS</p>
                 </div>
               </Card>
               <Card 
