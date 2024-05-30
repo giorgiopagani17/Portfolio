@@ -92,7 +92,7 @@ const Contact = () => {
         <>
             {isMobile ? (
                 <div className="flex flex-col-reverse min-h-screen gap-x-[10%]]" >
-                    <div className="mb-6 pl-5 w-96">
+                    <div className="mb-6 pl-5 w-96 slide-in-right">
                         <form className="max-w-sm mx-auto" onSubmit={handleSubmit}>
                             <label htmlFor="email" className="mt-5 block mb-2 text-base font-medium text-gray-900 dark:text-white">Email</label>
                             <div className="relative">
@@ -185,7 +185,7 @@ const Contact = () => {
                             {status && <p className="mt-4 text-white">{status}</p>}
                         </form>
                     </div>
-                    <div className="mb-6 pl-5 text-white">
+                    <div className="mb-6 pl-5 text-white slide-in-left">
                         <p><strong className="text-[#3b83bd] text-6xl">Contattami</strong></p>
                         <p className="text-xl mt-10">Compila il modulo qui sotto per contattarmi, <br/> verrai ricontattato il prima possibile!</p>
                         <div className="mt-10">
@@ -231,7 +231,7 @@ const Contact = () => {
                 </div>
             ) : (
                 <div className="flex items-center justify-center min-h-screen gap-x-[15%]" style={{ marginTop: '-8vh' }}>
-                    <div className="mb-6 pl-5 text-white">
+                    <div className="mb-6 pl-5 text-white slide-in-left">
                         <p><strong className="text-[#3b83bd] text-6xl">Contattami</strong></p>
                         <p className="text-xl mt-10">Compila il modulo alla tua destra per contattarmi, <br/> verrai ricontattato il prima possibile!</p>
                         <div className="mt-10">
@@ -274,7 +274,7 @@ const Contact = () => {
                             </button>
                         </div>
                     </div>
-                    <div className="mb-6 pl-5 w-96">
+                    <div className="mb-6 pl-5 w-96 slide-in-right">
                         <form className="max-w-sm mx-auto" onSubmit={handleSubmit}>
                             <label htmlFor="email" className="mt-5 block mb-2 text-base font-medium text-gray-900 dark:text-white">Email</label>
                             <div className="relative">

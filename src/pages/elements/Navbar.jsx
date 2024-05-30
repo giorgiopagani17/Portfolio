@@ -6,17 +6,29 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import "./Css/Navbar.css"; 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Nav = () => {
   const [openNav, setOpenNav] = useState(false);
-  const [activeLink, setActiveLink] = useState("home");
+  const [activeLink, setActiveLink] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    const currentPath = location.pathname.slice(1);
+    
+    if(currentPath == ""){
+      setActiveLink("home");
+    } else {
+      setActiveLink(currentPath);
+    }
+    
+  }, [location]);
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
 
-    if(link == "home"){
+    if(link === "home"){
       navigate("/");
     } else {
       navigate("/" + link);
@@ -35,7 +47,6 @@ const Nav = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-20">
       <Typography

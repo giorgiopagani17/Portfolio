@@ -61,3 +61,33 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)!important;
   background-color: #286699!important;
 }
+
+@keyframes slideInLeftFade {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRightFade {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeftFade 1s ease-out forwards;
+}
+
+.slide-in-right {
+  animation: slideInRightFade 1s ease-out forwards;
+}

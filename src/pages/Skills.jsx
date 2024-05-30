@@ -17,11 +17,11 @@ const Skills = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="text-center mt-20 text-white text-6xl">
+      <div className="text-center mt-20 text-white text-6xl fade-in-scale">
         <strong>My Skills</strong>
       </div>
       <div className="flex">
-        <div className="flex justify-center">
+        <div className="flex justify-center slide-in-left">
             <Card className="mt-20 pr-10 pl-10">
               <CardBody>
                 <div className="flex justify-center mt-1 mb-6 space-x-20">
@@ -226,7 +226,7 @@ const Skills = () => {
               </CardBody>
             </Card>
         </div>
-        <div className="flex flex-col justify-center items-end mt-20 text-right w-80">
+        <div className="flex flex-col justify-center items-end mt-20 text-right w-80 slide-in-right">
             <div className="flex justify-end items-center">
                 <strong className="text-4xl text-[#3b83bd] flex items-center">
                 <span>Tech Stack</span>

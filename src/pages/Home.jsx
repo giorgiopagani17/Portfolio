@@ -76,7 +76,7 @@ const Home = () => {
   return (
     <>
       <div className="flex items-center justify-center min-h-screen gap-x-[10%]" style={{ marginTop: '-8vh' }}>
-        <Card color="transparent" shadow={false}>
+        <Card color="transparent" shadow={false} className="slide-in-left">
           <CardBody className="mb-6 pl-5 text-white">
             <p><strong className="text-white text-6xl">I'm Giorgio Pagani</strong></p>
             <p className="mt-3"><strong id="text" className="text-[#3b83bd] text-5xl">{typedText}</strong></p>
@@ -129,7 +129,7 @@ const Home = () => {
             </button>
           </CardBody>
         </Card>
-        <div>
+        <div className="slide-in-right">
           <img src="web.png"/>
         </div>
       </div>
