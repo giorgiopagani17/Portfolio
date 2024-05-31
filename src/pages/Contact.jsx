@@ -185,7 +185,7 @@ const Contact = () => {
                             {status && <p className="mt-4 text-white">{status}</p>}
                         </form>
                     </div>
-                    <div className="mb-6 pl-5 text-white slide-in-left">
+                    <div className="mt-5 mb-6 pl-5 text-white slide-in-left">
                         <p><strong className="text-[#3b83bd] text-6xl">Contattami</strong></p>
                         <p className="text-xl mt-10">Compila il modulo qui sotto per contattarmi, <br/> verrai ricontattato il prima possibile!</p>
                         <div className="mt-10">
