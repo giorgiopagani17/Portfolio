@@ -95,6 +95,7 @@ const Projects = () => {
                 </div>
                 <div className="flex justify-center">
                   <InfoCard 
+                    imageUrl="https://www.softwave-soltec.it/wp-content/uploads/2021/05/quali-sono-i-linguaggi-di-programmazione-piu-richiesti.jpg"
                     title="7+"
                     description="Linguaggi di Programmazione"
                     onClick={() => handleLinkClick("skills")}
