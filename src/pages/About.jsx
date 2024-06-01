@@ -3,8 +3,6 @@ import { Card, CardBody } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
 import "./elements/Css/About.css";
 
-//SISTEMARE MINI CARD PER L'IPAD
-
 const Projects = () => {
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
@@ -95,7 +93,7 @@ const Projects = () => {
                 </div>
                 <div className="flex justify-center">
                   <InfoCard 
-                    imageUrl="https://www.softwave-soltec.it/wp-content/uploads/2021/05/quali-sono-i-linguaggi-di-programmazione-piu-richiesti.jpg"
+                    imageUrl="https://i0.wp.com/bestpractice.biz/wp-content/uploads/2021/02/Maddie-banner-skill-set.png?fit=1200%2C628&ssl=1"
                     title="7+"
                     description="Linguaggi di Programmazione"
                     onClick={() => handleLinkClick("skills")}
@@ -152,11 +150,13 @@ const Projects = () => {
                     onClick={() => handleOpen("https://jac-its.it/corso/web-development/")}
                   />
                   <InfoCard 
+                    imageUrl="https://sergioporco.altervista.org/wp-content/uploads/2018/06/programming-language.jpg"
                     title="7+"
                     description="Linguaggi di Programmazione"
                     onClick={() => handleLinkClick("skills")}
                   />
-                  <InfoCard 
+                  <InfoCard
+                    imageUrl="https://www.comunicarekairos.it/images/portfolio-kairos/web-design/menti-vaganti-creazione-sito-web-marketing.jpg"
                     title="3"
                     description="Progetti Completati"
                     onClick={() => handleLinkClick("progetti")}

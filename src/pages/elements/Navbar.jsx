@@ -7,6 +7,8 @@ import {
 } from "@material-tailwind/react";
 import "./Css/Navbar.css"; 
 import { useNavigate, useLocation } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse, faUser, faDiagramProject, faMessage, faLayerGroup } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -57,6 +59,7 @@ const Nav = () => {
         onClick={() => handleLinkClick("home")}
       >
         <a href="#" className="flex items-center font-bold text-base">
+          <FontAwesomeIcon icon={faHouse} className="mr-1.5"/> 
           Home
         </a>
       </Typography>
@@ -68,6 +71,7 @@ const Nav = () => {
         onClick={() => handleLinkClick("about")}
       >
         <a href="#" className="flex items-center font-bold text-base">
+          <FontAwesomeIcon icon={faUser} className="mr-1.5"/>
           About
         </a>
       </Typography>
@@ -79,6 +83,7 @@ const Nav = () => {
         onClick={() => handleLinkClick("progetti")}
       >
         <a href="#" className="flex items-center font-bold text-base">
+          <FontAwesomeIcon icon={faDiagramProject} className="mt-0.5 mr-1.5"/>
           Progetti
         </a>
       </Typography>
@@ -90,6 +95,7 @@ const Nav = () => {
         onClick={() => handleLinkClick("skills")}
       >
         <a href="#" className="flex items-center font-bold text-base">
+          <FontAwesomeIcon icon={faLayerGroup} className="mr-1.5"/>
           Skills
         </a>
       </Typography>
@@ -101,6 +107,7 @@ const Nav = () => {
         onClick={() => handleLinkClick("contact")}
       >
         <a href="#" className="flex items-center font-bold text-base">
+          <FontAwesomeIcon icon={faMessage} className="mt-0.5 mr-1.5"/>
           Contact
         </a>
       </Typography>
