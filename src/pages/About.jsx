@@ -48,7 +48,7 @@ const Projects = () => {
   return (
     <div className="flex justify-center items-center min-h-screen" >      
       {isMobile ? (
-        <Card className="mt-10 p-2 w-full">
+        <Card className="mt-20 p-2 w-full">
           <CardBody>
             <div className="flex items-center justify-center">
               <img
@@ -64,7 +64,7 @@ const Projects = () => {
               <div className="mt-5 text-lg flex items-center justify-center gap-1">
                 <p className="w-1/2">
                   Ciao👋🏼 Sono{" "}
-                  <strong className="text-[#3b83bd]">Giorgio Pagani</strong>! <br /> Un{" "}
+                  <strong className="text-[#3b83bd] inline-block whitespace-nowrap">Giorgio Pagani</strong>! <br /> Un{" "}
                   <strong className="text-[#3b83bd]">Full-Stack Developer</strong>👨🏻‍💻{" "}
                   <br/> situato a <strong className="text-[#3b83bd] inline-block whitespace-nowrap">Bergamo🌍</strong>
                 </p>

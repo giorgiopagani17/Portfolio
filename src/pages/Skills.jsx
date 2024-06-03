@@ -16,8 +16,8 @@ const Skills = () => {
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="text-center mt-20 text-white text-6xl fade-in-scale">
+    <div className="flex flex-col justify-center items-center min-h-screen">
+      <div className="text-center mt-5 text-white text-6xl fade-in-scale">
         <strong>My Skills</strong>
       </div>
       <div className="flex">
