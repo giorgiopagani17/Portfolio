@@ -89,7 +89,7 @@ const Home = () => {
   return (
     <>
       {isMobile ? (
-        <div className="flex items-center justify-center min-h-screen gap-x-[10%]" style={{ marginTop: '-8vh' }}>
+        <div className="flex items-center justify-center min-h-screen gap-x-[10%]">
           <Card color="transparent" shadow={false} className="slide-in-left">
             <CardBody className="mb-6 pl-5 text-white">
               <p><strong className="text-white text-6xl">I'm Giorgio Pagani</strong></p>

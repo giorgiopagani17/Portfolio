@@ -46,7 +46,7 @@ const Projects = () => {
   );
 
   return (
-    <>
+    <div className="flex justify-center items-center min-h-screen" >      
       {isMobile ? (
         <Card className="mt-10 p-2 w-full">
           <CardBody>
@@ -167,7 +167,7 @@ const Projects = () => {
           </Card>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

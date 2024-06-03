@@ -115,7 +115,7 @@ const Nav = () => {
   );
 
   return (
-    <div className="max-h-[768px] w-[100%]">
+    <div className="absolute top-0 right-0 max-h-[768px] w-[100%]">
       <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none border-none px-4 py-2 lg:px-8 lg:py-4 bg-[#0a054a]">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
