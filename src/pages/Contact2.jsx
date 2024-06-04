@@ -94,7 +94,6 @@ const Contact = () => {
                 <svg
                 className="w-full"
                 viewBox="0 0 1200 150"
-                xmlns="../../wave.png"
                 preserveAspectRatio="none"
                 >
                 <path
