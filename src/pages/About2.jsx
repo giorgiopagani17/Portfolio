@@ -46,15 +46,29 @@ const Projects = () => {
   );
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-white">
-        {isMobile ? (
+    <div className="min-h-screen bg-white">
+      <div className="w-full overflow-hidden">
+        <svg
+        className="w-full"
+        viewBox="0 0 1200 150"
+        xmlns="../../wave.png"
+        preserveAspectRatio="none"
+        >
+        <path
+            d="M0,0 C150,100 350,0 500,100 C650,200 850,0 1200,100 L1200,0 L0,0 Z"
+            fill="#0a0436"
+        />
+        </svg>
+      </div> 
+      {isMobile ? (
           <></>
         ) : ( 
-          <div className="text-center text-[#3b83bd] text-6xl fade-in-scale">
+          <div className="text-center text-[#3b83bd] text-6xl fade-in-scale mt-20">
               <strong>About Me</strong>
           </div>
         )}
         <div className="flex justify-center items-center" >
+          
             {isMobile ? (
                 <Card className="p-2 w-full">
                 <CardBody>
@@ -119,15 +133,14 @@ const Projects = () => {
                 </CardBody>
                 </Card>
             ) : (
-                <div className="flex flex-col items-center mt-5 fade-in-scale">
-                <Card className="mt-10 p-2">
-                    <CardBody className="flex">
+                <div className="flex flex-col items-center fade-in-scale">
+                    <div className="flex">
                     <img
                         src="../../fotocartoon.jpg"
                         className="w-96 rounded-full slide-in-left"
                         alt="Giorgio Pagani"
                     />
-                    <div className="ml-10 flex flex-col justify-center slide-in-right">
+                    <div className="ml-10 flex flex-col justify-center slide-in-right text-white">
                         <div className="ml-5 text-lg">
                             <p className="text-xl">
                                 <p className="text-3xl mb-1">
@@ -170,8 +183,7 @@ const Projects = () => {
                         />
                         </div>
                     </div>
-                    </CardBody>
-                </Card>
+                    </div>
                 </div>
             )}
         </div>

@@ -16,11 +16,24 @@ const Skills = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen">
+    <div className="min-h-screen">
+        <div className="w-full overflow-hidden">
+        <svg
+          className="w-full"
+          viewBox="0 0 1200 150"
+          xmlns="../../wave.png"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,0 C150,100 350,0 500,100 C650,200 850,0 1200,100 L1200,0 L0,0 Z"
+            fill="#fff"
+          />
+        </svg>
+      </div>
       <div className="text-center text-white text-6xl fade-in-scale">
         <strong>My Skills</strong>
       </div>
-      <div className="flex">
+      <div className="flex justify-center items-center ">
         <div className="flex justify-center slide-in-left">
             <Card className="mt-10 pr-10 pl-10">
               <CardBody>

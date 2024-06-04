@@ -90,6 +90,19 @@ const Contact = () => {
 
     return (
         <>
+            <div className="w-full overflow-hidden">
+                <svg
+                className="w-full"
+                viewBox="0 0 1200 150"
+                xmlns="../../wave.png"
+                preserveAspectRatio="none"
+                >
+                <path
+                    d="M0,0 C150,100 350,0 500,100 C650,200 850,0 1200,100 L1200,0 L0,0 Z"
+                    fill="#fff"
+                />
+                </svg>
+            </div>
             {isMobile ? (
                 <div className="flex flex-col-reverse min-h-screen gap-x-[10%] mt-20" >
                     <div className="mb-6 pl-5 w-96 slide-in-right">
