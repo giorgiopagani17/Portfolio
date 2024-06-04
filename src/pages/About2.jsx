@@ -47,9 +47,13 @@ const Projects = () => {
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-white">
-        <div className="text-center text-[#3b83bd] text-6xl fade-in-scale">
-            <strong>About Me</strong>
-        </div>
+        {isMobile ? (
+          <></>
+        ) : ( 
+          <div className="text-center text-[#3b83bd] text-6xl fade-in-scale">
+              <strong>About Me</strong>
+          </div>
+        )}
         <div className="flex justify-center items-center" >
             {isMobile ? (
                 <Card className="p-2 w-full">
@@ -69,7 +73,7 @@ const Projects = () => {
                             <p className="w-1/2">
                             Ciao👋🏼 Sono{" "}
                             <strong className="text-[#3b83bd] inline-block whitespace-nowrap">Giorgio Pagani</strong>! <br /> Un{" "}
-                            <strong className="text-[#3b83bd]">Full-Stack Developer</strong>👨🏻‍💻{" "}
+                            <strong className="text-[#3b83bd]">Full-Stack <span className="inline-block whitespace-nowrap">Developer👨🏻‍💻</span></strong>{" "}
                             <br/> situato a <strong className="text-[#3b83bd] inline-block whitespace-nowrap">Bergamo🌍</strong>
                             </p>
                             <p className="mt-2 flex items-center justify-center w-1/2">

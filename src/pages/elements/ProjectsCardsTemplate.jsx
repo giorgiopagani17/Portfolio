@@ -1,7 +1,8 @@
 // src/components/Card.js
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faEyeSlash, faCode } from "@fortawesome/free-solid-svg-icons";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Card = ({ title, content, image, tech1, techimage1, tech2, techimage2, tech3, techimage3, repository }) => {
   const [isHoveringEye, setIsHoveringEye] = useState(false);
@@ -30,9 +31,9 @@ const Card = ({ title, content, image, tech1, techimage1, tech2, techimage2, tec
       >
         Preview
         {isHoveringEye ? (
-          <FontAwesomeIcon icon={faEye} bounce className="ml-2"/>
+          <FontAwesomeIcon icon={faEye} bounce className="ml-1.5"/>
         ) : (
-          <FontAwesomeIcon icon={faEyeSlash} className="ml-2"/>
+          <FontAwesomeIcon icon={faEyeSlash} className="ml-1.5"/>
         )}
       </button>
         <button id="button" className="ml-2 text-white text-base mt-5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-2.5 py-2 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -42,9 +43,9 @@ const Card = ({ title, content, image, tech1, techimage1, tech2, techimage2, tec
         >
           Code
           {isHoveringCode ? (
-            <FontAwesomeIcon icon={faCode} beat className="ml-2"/>
+            <FontAwesomeIcon icon={faGithub} beat className="ml-1.5"/>
           ) : (
-            <FontAwesomeIcon icon={faCode} className="ml-2"/>
+            <FontAwesomeIcon icon={faGithub} className="ml-1.5"/>
           )}
         </button>
       </div>
