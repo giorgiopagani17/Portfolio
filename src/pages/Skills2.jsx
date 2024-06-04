@@ -29,7 +29,7 @@ const Skills = () => {
           />
         </svg>
       </div>
-      <div className="text-center text-white text-6xl fade-in-scale">
+      <div className="text-center text-6xl mt-5 fade-in-scale text-[#3b83bd]">
         <strong>My Skills</strong>
       </div>
       <div className="flex justify-center items-center ">
