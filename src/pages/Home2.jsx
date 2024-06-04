@@ -5,7 +5,7 @@ import {
 } from "@material-tailwind/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faDownload, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import "./elements/Css/Home.css";
 
 const Home = () => {
@@ -201,6 +201,11 @@ const Home = () => {
           </Card>
           <div className="slide-in-right">
             <img src="web.png"/>
+          </div>
+          <div className="absolute min-h-screen flex flex-col items-center justify-center">
+            <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-[#3b83bd] text-2xl animate-bounce whitespace-nowrap">
+              <FontAwesomeIcon icon={faArrowDown} className="ml-2 mb-2"/>
+            </div>
           </div>
         </div>
       )}

@@ -62,12 +62,11 @@ const Projects = () => {
       {isMobile ? (
           <></>
         ) : ( 
-          <div className="text-center text-[#3b83bd] text-6xl fade-in-scale mt-20">
+          <div className="text-center text-[#3b83bd] text-6xl fade-in-scale mt-10 mb-10">
               <strong>About Me</strong>
           </div>
         )}
         <div className="flex justify-center items-center" >
-          
             {isMobile ? (
                 <Card className="p-2 w-full">
                 <CardBody>
@@ -139,7 +138,7 @@ const Projects = () => {
                         className="w-96 rounded-full slide-in-left"
                         alt="Giorgio Pagani"
                     />
-                    <div className="ml-10 flex flex-col justify-center slide-in-right text-white">
+                    <div className="ml-10 flex flex-col justify-center slide-in-right">
                         <div className="ml-5 text-lg">
                             <p className="text-xl">
                                 <p className="text-3xl mb-1">
