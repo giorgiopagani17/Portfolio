@@ -5,6 +5,7 @@ import Navbar from './pages/elements/Navbar.jsx';
 import Skills from './pages/Skills.jsx';
 import Projects from './pages/Projects.jsx';
 import About from './pages/About.jsx';
+import Computer from './Computer/ComputerGraphic.jsx';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/progetti" element={<Projects />} />
           <Route path="/about" element={<About />} />
+          <Route path="/pc" element={<Computer />} />
         </Routes>
       </Router>
     </div>

@@ -8,7 +8,7 @@
       transform: scale(1);
     }
   }
-  
+
   .fade-in-scale {
     animation: fadeInScale 1s ease-out forwards;
   }
