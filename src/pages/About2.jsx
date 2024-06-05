@@ -68,7 +68,7 @@ const Projects = () => {
         ) : ( 
           <div className="text-center text-[#3b83bd] text-6xl fade-in-scale mb-10">
             <div className="relative flex flex-col justify-center items-center">
-              <div className="absolute text-[#0A0436] opacity-20 blur-[4px] text-[150%] font-bold">
+              <div className="absolute mb-10 text-[#0A0436] opacity-25 blur-[3px] text-[125%] font-bold">
                 About Me
               </div>
               <div className="relative text-[#3b83bd] text-6xl font-bold">

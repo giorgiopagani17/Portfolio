@@ -12,3 +12,7 @@
   .fade-in-scale {
     animation: fadeInScale 1s ease-out forwards;
   }
+
+  .swiper-pagination {
+    margin-top: 10rem!important; /* Regola la distanza tra i puntini di paginazione e il contenuto del Swiper */
+  }

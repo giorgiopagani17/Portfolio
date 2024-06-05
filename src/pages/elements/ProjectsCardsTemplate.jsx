@@ -13,7 +13,7 @@ const Card = ({ title, content, image, tech1, techimage1, tech2, techimage2, tec
   };
 
   return (
-    <div className="bg-white border border-gray-300 rounded-lg shadow-md p-4 m-2 w-96">
+    <div className="bg-white border border-gray-300 rounded-lg shadow-md p-4 w-96">
       <img src={image} className="h-46"/>
       <h3 className="text-3xl text-[#3b83bd] font-bold mb-2 mt-3">{title}</h3>
       <div className='flex items-center justify-center mt-3'>
