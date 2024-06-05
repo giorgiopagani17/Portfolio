@@ -66,10 +66,9 @@ const Home = () => {
           setTypedText(prevText => prevText + fullText[index]);
           setIndex(prevIndex => prevIndex + 1);
         } else {
-          setIsTyping(false);
-          clearInterval(typeInterval);
           setTimeout(() => {
             setIsTyping(false);
+            clearInterval(typeInterval);
           }, 1100); 
         }
       } else {

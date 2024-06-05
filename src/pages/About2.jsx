@@ -157,7 +157,7 @@ const Projects = () => {
                                   situato a <strong className="text-[#3b83bd]">Bergamo</strong>🌍
                               </p>
                               <p className="mt-2">
-                                  Sono un ragazzo creativo, educato e determinato. Ho un <br /> diploma in Sistemi Informativi
+                                  Sono un ragazzo creativo, ambizioso e determinato. Ho un <br /> diploma in Sistemi Informativi
                                   Aziendali e ho ottime capacità <br /> di lavorare in un team.
                               </p>
                           </div>
