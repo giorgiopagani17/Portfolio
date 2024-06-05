@@ -92,8 +92,8 @@ const Home = () => {
         <div className="flex items-center justify-center min-h-screen gap-x-[10%]">
           <Card color="transparent" shadow={false} className="slide-in-left">
             <CardBody className="mb-6 pl-5 text-white">
-              <p><strong className="text-white text-6xl">I'm Giorgio Pagani</strong></p>
-              <p className="mt-3"><strong id="text" className="text-[#3b83bd] text-5xl">{typedText}</strong></p>
+              <p><strong className="text-white text-4xl">I'm Giorgio Pagani</strong></p>
+              <p className="mt-3"><strong id="text" className="text-[#3b83bd] text-2xl">{typedText}</strong></p>
               <p className="mt-10">Sono un full-stack developer specializzato in React e Python</p>
               <div className="mt-10">
 

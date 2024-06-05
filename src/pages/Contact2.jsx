@@ -91,15 +91,8 @@ const Contact = () => {
     return (
         <>
             <div className="w-full overflow-hidden">
-                <svg
-                className="w-full"
-                viewBox="0 0 1200 150"
-                preserveAspectRatio="none"
-                >
-                <path
-                    d="M0,0 C150,100 350,0 500,100 C650,200 850,0 1200,100 L1200,0 L0,0 Z"
-                    fill="#fff"
-                />
+                <svg id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" className="transition duration-300 ease-in-out delay-150 mt-[-10%]">
+                    <path d="M 0,400 L 0,150 C 110.17857142857142,170.92857142857144 220.35714285714283,191.85714285714286 343,171 C 465.64285714285717,150.14285714285714 600.7500000000001,87.50000000000001 726,89 C 851.2499999999999,90.49999999999999 966.6428571428571,156.14285714285714 1084,177 C 1201.357142857143,197.85714285714286 1320.6785714285716,173.92857142857144 1440,150 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#fff" fill-opacity="1" className="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path>
                 </svg>
             </div>
             {isMobile ? (
