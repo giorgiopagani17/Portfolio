@@ -1,9 +1,9 @@
 import Navbar from "../pages/elements/Navbar.jsx"
-import About from "../pages/About2.jsx"
-import Contact from "../pages/Contact2.jsx"
-import Home from "../pages/Home2.jsx"
-import Projects from "../pages/Projects2.jsx"
-import Skills from "../pages/Skills2.jsx"
+import About from "../pages/About.jsx"
+import Contact from "../pages/Contact.jsx"
+import Home from "../pages/Home.jsx"
+import Projects from "../pages/Projects.jsx"
+import Skills from "../pages/Skills.jsx"
 
 const Computer = () => {
 
