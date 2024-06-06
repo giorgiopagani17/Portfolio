@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faDownload, faPaperPlane, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import emailjs from 'emailjs-com';
+import 'aos/dist/aos.css';
+import Aos from "aos";
 
 const Contact = () => {
     const [hoveredIcon, setHoveredIcon] = useState(null);
@@ -18,6 +20,10 @@ const Contact = () => {
     const [status, setStatus] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        Aos.init();
+    }, []);
 
     useEffect(() => {
         const handleResize = () => {
@@ -97,7 +103,7 @@ const Contact = () => {
             </div>
             {isMobile ? (
                 <div className="flex flex-col-reverse min-h-screen gap-x-[10%] mt-20" >
-                    <div className="mb-6 pl-5 w-96 slide-in-right">
+                    <div className="mb-6 pl-5 w-96" data-aos="fade-right">
                         <form className="max-w-sm mx-auto" onSubmit={handleSubmit}>
                             <label htmlFor="email" className="mt-5 block mb-2 text-base font-medium text-gray-900 dark:text-white">Email</label>
                             <div className="relative">
@@ -190,7 +196,7 @@ const Contact = () => {
                             {status && <p className="mt-4 text-white">{status}</p>}
                         </form>
                     </div>
-                    <div className="mt-5 mb-6 pl-5 text-white slide-in-left">
+                    <div className="mt-5 mb-6 pl-5 text-white" data-aos="fade-left">
                         <p><strong className="text-[#3b83bd] text-6xl">Contattami</strong></p>
                         <p className="text-xl mt-10">Compila il modulo qui sotto per contattarmi, <br/> verrai ricontattato il prima possibile!</p>
                         <div className="mt-10">
@@ -236,7 +242,7 @@ const Contact = () => {
                 </div>
             ) : (
                 <div className="flex items-center justify-center min-h-screen gap-x-[15%]" >
-                    <div className="mb-6 pl-5 text-white slide-in-left">
+                    <div className="mb-6 pl-5 text-white" data-aos="fade-right">
                         <p><strong className="text-[#3b83bd] text-6xl">Contattami</strong></p>
                         <p className="text-xl mt-10">Compila il modulo alla tua destra per contattarmi, <br/> verrai ricontattato il prima possibile!</p>
                         <div className="mt-10">
@@ -279,7 +285,7 @@ const Contact = () => {
                             </button>
                         </div>
                     </div>
-                    <div className="mb-6 pl-5 w-96 slide-in-right">
+                    <div className="mb-6 pl-5 w-96" data-aos="fade-left">
                         <form className="max-w-sm mx-auto" onSubmit={handleSubmit}>
                             <label htmlFor="email" className="mt-5 block mb-2 text-base font-medium text-gray-900 dark:text-white">Email</label>
                             <div className="relative">

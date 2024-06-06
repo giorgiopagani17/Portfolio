@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Card, CardBody, Typography } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons";
 import "./elements/Css/Skills.css";
+import 'aos/dist/aos.css';
+import Aos from "aos";
 
 const Skills = () => {
   const [message, setMessage] = useState("Language");
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
 
   const handleLanguageClick = () => {
     setMessage("Language");
@@ -33,8 +40,8 @@ const Skills = () => {
         </div>
       </div>
       <div className="flex justify-center items-center">
-        <div className="flex justify-center slide-in-left">
-            <Card className="mt-10 pr-10 pl-10">
+        <div className="flex justify-center">
+            <Card className="mt-10 pr-10 pl-10" data-aos="fade-right">
               <CardBody>
                 <div className="flex justify-center mt-1 mb-6 space-x-20">
                 <strong
@@ -248,7 +255,7 @@ const Skills = () => {
               </CardBody>
             </Card>
         </div>
-        <div className="flex flex-col justify-center items-end mt-20 text-right w-80 slide-in-right">
+        <div className="flex flex-col justify-center items-end mt-20 text-right w-80" data-aos="fade-left">
             <div className="flex justify-end items-center">
                 <strong className="text-4xl text-[#3b83bd] flex items-center">
                 <span>Tech Stack</span>

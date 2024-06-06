@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faDownload, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import "./elements/Css/Home.css";
+import 'aos/dist/aos.css';
+import Aos from "aos";
 
 const Home = () => {
   const [typedText, setTypedText] = useState('');
@@ -17,6 +19,10 @@ const Home = () => {
   const [hoveredIcon, setHoveredIcon] = useState(null);
   const [isDownloadHovered, setIsDownloadHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {

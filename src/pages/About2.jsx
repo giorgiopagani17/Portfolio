@@ -1,15 +1,18 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Card, CardBody } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
-import "intersection-observer"; // Importa il polyfill
 import "animate.css";
 import "./elements/Css/About.css";
+import 'aos/dist/aos.css';
+import Aos from "aos";
 
 const About = () => {
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
-  const aboutMeRef = useRef(null);
-  const imageRef = useRef(null);
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -19,42 +22,6 @@ const About = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !entry.target.dataset.animationApplied) {
-            entry.target.classList.add("animate__animated", "animate__zoomInDown");
-            entry.target.dataset.animationApplied = true;
-          } else if (!entry.isIntersecting && entry.target.dataset.animationApplied) {
-            entry.target.classList.remove("animate__animated", "animate__zoomInDown");
-            entry.target.dataset.animationApplied = false;
-          }
-        });
-      },
-      {
-        threshold: 0.3,
-      }
-    );
-  
-    if (aboutMeRef.current) {
-      observer.observe(aboutMeRef.current);
-    }
-    if (imageRef.current) {
-      observer.observe(imageRef.current);
-    }
-  
-    return () => {
-      if (aboutMeRef.current) {
-        observer.unobserve(aboutMeRef.current);
-      }
-      if (imageRef.current) {
-        observer.unobserve(imageRef.current);
-      }
-    };
-  }, []);
-  
 
   const handleOpen = (url) => {
     window.open(url, "_blank");
@@ -139,12 +106,10 @@ const About = () => {
                   src="../../fotocartoon.jpg"
                   className="w-96 rounded-full"
                   alt="Giorgio Pagani"
-                  ref={imageRef}
                 />
               </div>
               <div
                 className="flex flex-col justify-center"
-                ref={aboutMeRef}
               >
                 <h1 className="mt-5 text-5xl text-[#3b83bd] flex items-center justify-center">
                   <strong>About Me</strong>
@@ -206,17 +171,15 @@ const About = () => {
             </CardBody>
           </Card>
         ) : (
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center" data-aos="fade-up">
             <div className="flex">
               <img
                 src="../../fotocartoon.jpg"
                 className="w-96 rounded-full mr-5"
                 alt="Giorgio Pagani"
-                ref={imageRef}
               />
               <div
                 className="ml-10 flex flex-col justify-center"
-                ref={aboutMeRef}
               >
                 <div className="ml-5 mr-5 text-lg">
                   <p className="text-xl">
