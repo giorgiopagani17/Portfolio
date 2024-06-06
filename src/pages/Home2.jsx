@@ -92,7 +92,7 @@ const Home = () => {
   }, [index, isTyping]);
 
   return (
-    <>
+    <div id="home">
       {isMobile ? (
         <div className="flex items-center justify-center min-h-screen gap-x-[10%]">
           <Card color="transparent" shadow={false} className="slide-in-left">
@@ -214,7 +214,7 @@ const Home = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

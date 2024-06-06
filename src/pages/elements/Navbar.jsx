@@ -9,6 +9,7 @@ import "./Css/Navbar.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faUser, faDiagramProject, faMessage, faLayerGroup } from "@fortawesome/free-solid-svg-icons";
+import { Link } from 'react-scroll';
 
 const Nav = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -16,6 +17,46 @@ const Nav = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+  
+      const homePosition = document.getElementById("home").offsetTop;
+      const aboutPosition = document.getElementById("about").offsetTop;
+      const projectsPosition = document.getElementById("projects").offsetTop;
+      const skillsPosition = document.getElementById("skills").offsetTop;
+      const contactPosition = document.getElementById("contact").offsetTop;
+  
+      const distanceToHome = Math.abs(homePosition - scrollPosition);
+      const distanceToAbout = Math.abs(aboutPosition - scrollPosition);
+      const distanceToProjects = Math.abs(projectsPosition - scrollPosition);
+      const distanceToSkills = Math.abs(skillsPosition - scrollPosition);
+      const distanceToContact = Math.abs(contactPosition - scrollPosition);
+  
+      const threshold = 100;
+  
+      if (distanceToHome < threshold) {
+        setActiveLink("home");
+      } else if (distanceToAbout < threshold) {
+        setActiveLink("about");
+      } else if (distanceToProjects < threshold) {
+        setActiveLink("progetti");
+      } else if (distanceToSkills < threshold) {
+        setActiveLink("skills");
+      } else if (distanceToContact < threshold) {
+        setActiveLink("contact");
+      }
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+  
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  
+
+  
   useEffect(() => {
     const currentPath = location.pathname.slice(1);
     
@@ -56,60 +97,85 @@ const Nav = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        onClick={() => handleLinkClick("home")}
       >
-        <a href="#" className="flex items-center font-bold text-base">
+        <Link
+          to="home"  
+          smooth={true}
+          spy={true}
+          duration={500}
+          className="flex items-center font-bold text-base"
+        >
           <FontAwesomeIcon icon={faHouse} className="mr-1.5"/> 
           Home
-        </a>
+        </Link>
       </Typography>
       <Typography
         id={`${activeLink === "about" ? "active" : "link"}`}
         as="li"
         variant="small"
         color="blue-gray"
-        onClick={() => handleLinkClick("about")}
       >
-        <a href="#" className="flex items-center font-bold text-base">
-          <FontAwesomeIcon icon={faUser} className="mr-1.5"/>
+        <Link
+          to="about" 
+          smooth={true}
+          spy={true}
+          duration={500}
+          className="flex items-center font-bold text-base"
+        >          
+        <FontAwesomeIcon icon={faUser} className="mr-1.5"/>
           About
-        </a>
-      </Typography>
-      <Typography
-        id={`${activeLink === "progetti" ? "active" : "link"}`}
-        as="li"
-        variant="small"
-        color="blue-gray"
-        onClick={() => handleLinkClick("progetti")}
-      >
-        <a href="#" className="flex items-center font-bold text-base">
-          <FontAwesomeIcon icon={faDiagramProject} className="mt-0.5 mr-1.5"/>
-          Progetti
-        </a>
+        </Link>
       </Typography>
       <Typography
         id={`${activeLink === "skills" ? "active" : "link"}`}
         as="li"
         variant="small"
         color="blue-gray"
-        onClick={() => handleLinkClick("skills")}
       >
-        <a href="#" className="flex items-center font-bold text-base">
+        <Link
+          to="skills"  
+          smooth={true}
+          spy={true}
+          duration={500}
+          className="flex items-center font-bold text-base"
+        >
           <FontAwesomeIcon icon={faLayerGroup} className="mr-1.5"/>
           Skills
-        </a>
+        </Link>
+      </Typography>
+      <Typography
+        id={`${activeLink === "progetti" ? "active" : "link"}`}
+        as="li"
+        variant="small"
+        color="blue-gray"
+      >
+        <Link
+          to="projects" 
+          smooth={true}
+          spy={true}
+          duration={500}
+          className="flex items-center font-bold text-base"
+        >
+          <FontAwesomeIcon icon={faDiagramProject} className="mt-0.5 mr-1.5"/>
+          Progetti
+        </Link>
       </Typography>
       <Typography
         id={`${activeLink === "contact" ? "active" : "link"}`}
         as="li"
         variant="small"
         color="blue-gray"
-        onClick={() => handleLinkClick("contact")}
       >
-        <a href="#" className="flex items-center font-bold text-base">
+        <Link
+          to="contact"  
+          smooth={true}
+          spy={true}
+          duration={500}
+          className="flex items-center font-bold text-base"
+        >
           <FontAwesomeIcon icon={faMessage} className="mt-0.5 mr-1.5"/>
           Contact
-        </a>
+        </Link>
       </Typography>
     </ul>
   );
@@ -121,7 +187,7 @@ const Nav = () => {
           <Typography
             as="a"
             href="#"
-            className="ml-3 cursor-pointer py-1.5 font-medium font-bold text-base"
+            className="ml-3 cursor-pointer py-1.5 font-medium text-base"
           >
             <span className="text-[#3b83bd]">G</span>
             P

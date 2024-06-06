@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Card, CardBody } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
 import "animate.css";
-import "./elements/Css/About.css";
 import 'aos/dist/aos.css';
 import Aos from "aos";
 
@@ -64,7 +63,7 @@ const About = () => {
   );
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" id="about">
       <div className="w-full overflow-hidden">
         <svg
           id="svg"
