@@ -33,7 +33,7 @@ const Skills = () => {
             </div>
         </div>
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center p-5">
         <div className="flex justify-center">
             <Card className="mt-10 pr-10 pl-10" data-aos="fade-right">
               <CardBody>
