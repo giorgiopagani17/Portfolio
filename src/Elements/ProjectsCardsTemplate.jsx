@@ -23,25 +23,13 @@ const Card = ({ title, content, image, tech1, techimage1, tech2, techimage2, tec
       </div>
       <p className="text-gray-700 mt-3">{content}</p>
       <div>
-      <button
-        id="button"
-        className="mr-2 text-white text-base mt-5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-2.5 py-2 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 relative"
-        onMouseEnter={() => setIsHoveringEye(true)}
-        onMouseLeave={() => setIsHoveringEye(false)}
-      >
-        Preview
-        {isHoveringEye ? (
-          <FontAwesomeIcon icon={faEye} bounce className="ml-1.5"/>
-        ) : (
-          <FontAwesomeIcon icon={faEyeSlash} className="ml-1.5"/>
-        )}
-      </button>
+
         <button id="button" className="ml-2 text-white text-base mt-5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-2.5 py-2 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           onMouseEnter={() => setIsHoveringCode(true)}
           onMouseLeave={() => setIsHoveringCode(false)}
           onClick={() => handleClick({repository})} 
         >
-          Code
+          View The Code
           {isHoveringCode ? (
             <FontAwesomeIcon icon={faGithub} beat className="ml-1.5"/>
           ) : (

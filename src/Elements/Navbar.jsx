@@ -157,7 +157,7 @@ const Nav = () => {
           className="flex items-center font-bold text-base"
         >
           <FontAwesomeIcon icon={faDiagramProject} className="mt-0.5 mr-1.5"/>
-          Progetti
+          Projects
         </Link>
       </Typography>
       <Typography
@@ -182,7 +182,7 @@ const Nav = () => {
 
   return (
     <div className="fixed z-50 top-0 right-0 max-h-[768px] w-[100%]">
-      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none border-none px-4 py-2 lg:px-8 lg:py-4 bg-[#0a054a]">
+      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none border-none px-4 py-2 lg:px-8 lg:py-4 bg-[#0d0a3e]">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
