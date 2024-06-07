@@ -8,7 +8,6 @@ import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-
 import { faEnvelope, faDownload, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import "../Css/Home.css";
 import 'aos/dist/aos.css';
-import Aos from "aos";
 import { Link } from 'react-scroll';
 
 const Home = () => {
@@ -19,10 +18,6 @@ const Home = () => {
   const fullText = "Full-Stack Developer";
   const [hoveredIcon, setHoveredIcon] = useState(null);
   const [isDownloadHovered, setIsDownloadHovered] = useState(false);
-
-  useEffect(() => {
-    Aos.init();
-  }, []);
 
   const handleIconMouseEnter = (iconName) => {
     setHoveredIcon(iconName);

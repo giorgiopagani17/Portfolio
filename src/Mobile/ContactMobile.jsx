@@ -5,7 +5,6 @@ import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-
 import { faDownload, faPaperPlane, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import emailjs from 'emailjs-com';
 import 'aos/dist/aos.css';
-import Aos from "aos";
 
 const Contact = () => {
     const [hoveredIcon, setHoveredIcon] = useState(null);
@@ -19,10 +18,6 @@ const Contact = () => {
     });
     const [status, setStatus] = useState('');
     const [isLoading, setIsLoading] = useState(false);
-
-    useEffect(() => {
-        Aos.init();
-    }, []);
 
     const handleIconMouseEnter = (iconName) => {
         setHoveredIcon(iconName);
@@ -88,10 +83,10 @@ const Contact = () => {
                     <path d="M 0,400 L 0,150 C 110.17857142857142,170.92857142857144 220.35714285714283,191.85714285714286 343,171 C 465.64285714285717,150.14285714285714 600.7500000000001,87.50000000000001 726,89 C 851.2499999999999,90.49999999999999 966.6428571428571,156.14285714285714 1084,177 C 1201.357142857143,197.85714285714286 1320.6785714285716,173.92857142857144 1440,150 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#fff" fill-opacity="1" className="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path>
                 </svg>
             </div>
-            <div className="flex items-center justify-center gap-x-[15%]" >
-                <div className="pl-5 text-white" data-aos="fade-right">
+            <div className="mt-5">
+            <div className="mt-5 mb-6 pl-5 text-white" data-aos="fade-left">
                     <p><strong className="text-[#3b83bd] text-6xl">Contattami</strong></p>
-                    <p className="text-xl mt-10">Compila il modulo alla tua destra per contattarmi, <br/> verrai ricontattato il prima possibile!</p>
+                    <p className="text-xl mt-10">Compila il modulo qui sotto per contattarmi, <br/> verrai ricontattato il prima possibile!</p>
                     <div className="mt-10">
                         <FontAwesomeIcon 
                             icon={faInstagram} 
@@ -132,10 +127,10 @@ const Contact = () => {
                         </button>
                     </div>
                 </div>
-                <div className="mb-6 pl-5 w-96" data-aos="fade-left">
+                <div className="mb-6 pl-5 w-96 mt-10" data-aos="fade-right">
                     <form className="max-w-sm mx-auto" onSubmit={handleSubmit}>
                         <label htmlFor="email" className="mt-5 block mb-2 text-base font-medium text-gray-900 dark:text-white">Email</label>
-                        <div className="relative">
+                        <div className="relative max-w-full pr-1">
                             <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
                                 <svg className="w-4 h-4 text-[#3b83bd] dark:text-[#3b83bd]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
                                     <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
@@ -155,7 +150,7 @@ const Contact = () => {
                         </div>
 
                         <label htmlFor="name" className="mt-5 block mb-2 text-base font-medium text-gray-900 dark:text-white">Nome e Cognome</label>
-                        <div className="relative">
+                        <div className="relative max-w-full pr-1">
                             <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
                                 <svg className="w-4 h-4 text-[#3b83bd] dark:text-[#3b83bd]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5zm0 2c-3.589 0-11 1.79-11 5v3h22v-3c0-3.21-7.411-5-11-5z"/>
@@ -174,7 +169,7 @@ const Contact = () => {
                         </div>
 
                         <label htmlFor="subject" className="mt-5 block mb-2 text-base font-medium text-gray-900 dark:text-white">Oggetto</label>
-                        <div className="relative">
+                        <div className="relative max-w-full pr-1">
                             <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
                                 <svg className="w-4 h-4 text-[#3b83bd] dark:text-[#3b83bd]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
@@ -193,18 +188,21 @@ const Contact = () => {
                         </div>
                         
                         <label htmlFor="message" className="mt-5 block mb-2 text-base font-medium text-gray-900 dark:text-white">Messaggio</label>
-                        <textarea 
-                            id="message" 
-                            name="message" 
-                            rows="4" 
-                            value={formData.message} 
-                            onChange={handleChange} 
-                            className="block p-2.5 w-full text-base text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
-                            placeholder="Ciao Giorgio, vorrei collaborare con te..." 
-                            required 
-                        ></textarea>
-                        <button 
-                            id="button"
+                            <div className="max-w-full pr-1">
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    rows="4" 
+                                    value={formData.message} 
+                                    onChange={handleChange} 
+                                    className="block p-2.5 w-full text-base text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                                    placeholder="Ciao Giorgio, vorrei collaborare con te..." 
+                                    required 
+                                ></textarea>
+                            </div>
+                        {status && <p className="mt-4 text-white">{status}</p>}
+                        <button
+                            id="button" 
                             type="submit" 
                             className="text-white mt-5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                             onMouseEnter={() => setIsConfirmHovered(true)} 
@@ -222,7 +220,6 @@ const Contact = () => {
                                 </>
                             )}
                         </button>
-                        {status && <p className="absolute mt-4 text-white">{status}</p>}
                     </form>
                 </div>
             </div>

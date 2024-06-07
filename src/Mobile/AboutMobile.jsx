@@ -2,13 +2,8 @@ import React, { useEffect } from "react";
 import { Card } from "@material-tailwind/react";
 import "animate.css";
 import 'aos/dist/aos.css';
-import Aos from "aos";
 
 const About = () => {
-
-  useEffect(() => {
-    Aos.init();
-  }, []);
 
   const handleOpen = (url) => {
     window.open(url, "_blank");
@@ -16,7 +11,7 @@ const About = () => {
 
   const InfoCard = ({ imageUrl, title, description, onClick }) => (
     <Card
-      className="relative flex items-center justify-center w-28 h-28 p-2 group overflow-hidden cursor-pointer border-2 border-transparent transition-colors duration-300 hover:border-[#3b83bd]"
+      className="relative flex items-center justify-center w-36 h-28 p-2 group overflow-hidden cursor-pointer border-2 border-transparent transition-colors duration-300 hover:border-[#3b83bd]"
       onClick={onClick}
     >
       {imageUrl && (
@@ -36,7 +31,7 @@ const About = () => {
   );
 
   const CardNumber = ({ title, description }) => (
-    <Card className="relative flex items-center justify-center w-28 h-28 p-2 overflow-hidden border-2 border-transparent transition-colors duration-300 hover:border-[#3b83bd]">
+    <Card className="relative flex items-center justify-center w-36 h-28 p-2 overflow-hidden border-2 border-transparent transition-colors duration-300 hover:border-[#3b83bd]">
       <div className="relative z-10 flex flex-col items-center">
         <strong className="pb-2 text-center text-lg text-[#3b83bd]">
           {title}
@@ -66,7 +61,7 @@ const About = () => {
             ></path>
             </svg>
         </div>
-        <div className="text-center text-[#3b83bd] text-6xl mb-8">
+        <div className="text-center text-[#3b83bd] text-6xl mb-8 mt-5">
             <div className="relative flex flex-col justify-center items-center">
             <div className="absolute mb-10 text-[#0A0436] opacity-25 blur-[3px] text-[125%] font-bold">
                 About Me
@@ -78,32 +73,29 @@ const About = () => {
         </div>
         <div className="flex justify-center items-center">
             <div className="flex flex-col items-center" data-aos="fade-up">
-                <div className="flex mb-10">
                     <img
                         src="./file/fotocartoon.jpg"
-                        className="w-96 rounded-full mr-5"
+                        className="w-96 rounded-full"
                         alt="Giorgio Pagani"
+                        style={{ transform: 'scale(0.97)', transformOrigin: 'top' }}
                     />
-                    <div className="ml-10 flex flex-col justify-center">
+                    <div className="ml-5 mr-5 flex flex-col justify-center">
                         <div className="ml-5 mr-5 text-lg">
-                            <p className="text-xl">
+                            <p className="text-xl text-center mt-5">
                                 <p className="text-3xl mb-1">
-                                Ciao👋🏼<span className="ml-1"> Sono </span>
-                                <strong className="text-[#3b83bd]">Giorgio Pagani</strong>!
+                                Ciao👋🏼
+                                <span className="ml-2 inline-block whitespace-nowrap"> Sono <strong className="text-[#3b83bd]">Giorgio Pagani</strong>!</span>
                                 </p>
-                                Un{" "}
-                                <strong className="text-[#3b83bd]">Full-Stack Developer</strong>
-                                👨🏻‍💻{" "}
-                                situato a <strong className="text-[#3b83bd]">Bergamo</strong>
-                                🌍
+                                <span className="inline-block whitespace-nowrap">Un <strong className="text-[#3b83bd]">Full-Stack Developer👨🏻‍💻 </strong></span>
+                                <span className="inline-block whitespace-nowrap">situato a <strong className="text-[#3b83bd]">Bergamo 🌍</strong></span>
                             </p>
-                            <p className="mt-2">
-                                Sono un ragazzo creativo, ambizioso e determinato. Ho un <br /> diploma in Sistemi Informativi
-                                Aziendali e ho ottime capacità <br /> di lavorare in un team.
+                            <p className="mt-2 text-center">
+                                Sono un ragazzo creativo, ambizioso e determinato. Ho un diploma in Sistemi Informativi
+                                Aziendali e ho ottime capacità di lavorare in un team.
                             </p>
                         </div>
                         <hr className="mt-5 mb-5 h-1 bg-[#3b83bd]" />
-                        <div className="flex flex-wrap justify-center gap-4">
+                        <div className="flex flex-wrap justify-center gap-4 mb-10">
                             <InfoCard
                                 imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcnZoKyWdFLJh6TNAlU4Y8QEAUVhISRa8J9g&s"
                                 title="Servizi Inf. Aziendali"
@@ -129,7 +121,6 @@ const About = () => {
                 </div>
             </div>
       </div>
-    </div>
   );
 };
 

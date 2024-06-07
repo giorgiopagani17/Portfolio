@@ -4,15 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons";
 import "../Css/Skills.css";
 import 'aos/dist/aos.css';
-import Aos from "aos";
 
 const Skills = () => {
   const [message, setMessage] = useState("Language");
-
-  useEffect(() => {
-    Aos.init();
-  }, []);
-
 
   const handleLanguageClick = () => {
     setMessage("Language");
