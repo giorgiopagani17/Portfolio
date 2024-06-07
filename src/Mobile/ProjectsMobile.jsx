@@ -13,8 +13,8 @@ const Projects = () => {
         </svg>
       </div> 
       <div className="text-center text-6xl mt-10">
-        <div className="relative flex flex-col justify-center items-center">
-          <div className="inline-block whitespace-nowrap absolute mb-10 text-[#0A0436] opacity-25 blur-[3px] text-[125%] font-bold">
+        <div className="relative flex flex-col justify-center items-center" data-aos="zoom-in-down">
+          <div className="inline-block whitespace-nowrap absolute mb-10 text-[#3b83bd] opacity-25 blur-[3px] text-7xl font-bold">
             My Projects
           </div>
           <div className="relative text-[#3b83bd] text-6xl font-bold">

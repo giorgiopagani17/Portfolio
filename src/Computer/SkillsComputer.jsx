@@ -24,11 +24,11 @@ const Skills = () => {
         </svg>
       </div>
       <div className="text-center text-black text-6xl fade-in-scale mb-5">
-        <div className="relative flex flex-col justify-center items-center">
-            <div className="inline-block whitespace-nowrap absolute mb-10 text-[#3b83bd] opacity-35 blur-[3px] text-[145%] font-bold">
+        <div className="relative flex flex-col justify-center items-center" data-aos="zoom-in-down">
+            <div className="inline-block whitespace-nowrap absolute mb-10 text-[#3b83bd] opacity-25 blur-[3px] text-[145%] font-bold">
                 My Skills
             </div>
-            <div className="relative text-white text-6xl font-bold">
+            <div className="relative text-[#3b83bd] text-7xl font-bold">
                 My Skills
             </div>
         </div>

@@ -88,7 +88,7 @@ const Home = () => {
             <CardBody className="mb-6 pl-5 text-white">
               <p><strong className="text-white text-5xl">I'm Giorgio Pagani</strong></p>
               <p className="mt-3 h-7"><strong id="text" className="text-[#3b83bd] text-3xl">{typedText}</strong></p>
-              <p className="mt-10">Sono un full-stack developer specializzato in React e Python</p>
+              <p className="mt-10">Sono un full-stack developer specializzato <br/> in React e Python</p>
               <div className="mt-10">
 
                 <FontAwesomeIcon 

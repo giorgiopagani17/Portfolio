@@ -62,8 +62,8 @@ const About = () => {
             </svg>
         </div>
         <div className="text-center text-[#3b83bd] text-6xl mb-8 mt-5">
-            <div className="relative flex flex-col justify-center items-center">
-            <div className="absolute mb-10 text-[#0A0436] opacity-25 blur-[3px] text-[125%] font-bold">
+            <div className="relative flex flex-col justify-center items-center" data-aos="zoom-in-down">
+            <div className="absolute mb-10 text-[#3b83bd] opacity-25 blur-[3px] text-7xl font-bold">
                 About Me
             </div>
             <div className="relative text-[#3b83bd] text-6xl font-bold">
