@@ -135,7 +135,7 @@ const Home = () => {
             </CardBody>
           </Card>
           <div className="slide-in-right">
-            <img src="./file/web.png"/>
+            <img src="./public/web.png"/>
           </div>
           <div className="absolute min-h-screen flex flex-col items-center justify-center">
             <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-[#3b83bd] text-2xl animate-bounce whitespace-nowrap">
