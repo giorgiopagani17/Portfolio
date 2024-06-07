@@ -98,7 +98,7 @@ const About = () => {
                     </strong>
                   </p>
                   <p className="mt-2 flex items-center justify-center w-1/2">
-                    Sono un ragazzo creativo, educato e determinato. Ho un diploma in Sistemi
+                    Sono un ragazzo creativo, ambizioso e determinato. Ho un diploma in Sistemi
                     Informativi Aziendali e ho ottime capacità di lavorare in un team.
                   </p>
                 </div>
