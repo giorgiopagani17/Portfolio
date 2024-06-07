@@ -82,6 +82,7 @@ const About = () => {
                         src="./file/fotocartoon.jpg"
                         className="w-96 rounded-full"
                         alt="Giorgio Pagani"
+                        style={{ transform: 'scale(0.97)', transformOrigin: 'top' }}
                     />
                     <div className="ml-5 mr-5 flex flex-col justify-center">
                         <div className="ml-5 mr-5 text-lg">
