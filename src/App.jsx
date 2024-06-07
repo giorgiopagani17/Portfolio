@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Elements/Navbar.jsx';
-import Computer from './Computer/ComputerGraphic.jsx';
+import Portfolio from './Portfolio.jsx';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <Router>
         <Navbar /> 
         <Routes>
-          <Route path="/" element={<Computer />} />
+          <Route path="/" element={<Portfolio />} />
         </Routes>
       </Router>
     </div>
