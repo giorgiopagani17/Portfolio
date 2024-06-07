@@ -5,7 +5,7 @@ import {
   Typography,
   IconButton,
 } from "@material-tailwind/react";
-import "./Css/Navbar.css"; 
+import "../Css/Navbar.css"; 
 import { useNavigate, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faUser, faDiagramProject, faMessage, faLayerGroup } from "@fortawesome/free-solid-svg-icons";

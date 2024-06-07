@@ -1,33 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Card, CardBody } from "@material-tailwind/react";
-import { useNavigate } from "react-router-dom";
 import "animate.css";
 import 'aos/dist/aos.css';
 import Aos from "aos";
 
 const About = () => {
-  const navigate = useNavigate();
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
   useEffect(() => {
     Aos.init();
   }, []);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1024);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   const handleOpen = (url) => {
     window.open(url, "_blank");
-  };
-
-  const handleLinkClick = (link) => {
-    navigate("/" + link);
   };
 
   const InfoCard = ({ imageUrl, title, description, onClick }) => (
@@ -82,22 +66,7 @@ const About = () => {
           ></path>
         </svg>
       </div>
-      {isMobile ? (
-        <></>
-      ) : (
-        <div className="text-center text-[#3b83bd] text-6xl mb-10">
-          <div className="relative flex flex-col justify-center items-center">
-            <div className="absolute mb-10 text-[#0A0436] opacity-25 blur-[3px] text-[125%] font-bold">
-              About Me
-            </div>
-            <div className="relative text-[#3b83bd] text-6xl font-bold">
-              About Me
-            </div>
-          </div>
-        </div>
-      )}
       <div className="flex justify-center items-center">
-        {isMobile ? (
           <Card className="p-2 w-full">
             <CardBody>
               <div className="flex items-center justify-center">
@@ -107,9 +76,7 @@ const About = () => {
                   alt="Giorgio Pagani"
                 />
               </div>
-              <div
-                className="flex flex-col justify-center"
-              >
+              <div className="flex flex-col justify-center">
                 <h1 className="mt-5 text-5xl text-[#3b83bd] flex items-center justify-center">
                   <strong>About Me</strong>
                 </h1>
@@ -169,61 +136,6 @@ const About = () => {
               </div>
             </CardBody>
           </Card>
-        ) : (
-          <div className="flex flex-col items-center" data-aos="fade-up">
-            <div className="flex">
-              <img
-                src="../../fotocartoon.jpg"
-                className="w-96 rounded-full mr-5"
-                alt="Giorgio Pagani"
-              />
-              <div
-                className="ml-10 flex flex-col justify-center"
-              >
-                <div className="ml-5 mr-5 text-lg">
-                  <p className="text-xl">
-                    <p className="text-3xl mb-1">
-                      Ciao👋🏼<span className="ml-1"> Sono </span>
-                      <strong className="text-[#3b83bd]">Giorgio Pagani</strong>!
-                    </p>
-                    Un{" "}
-                    <strong className="text-[#3b83bd]">Full-Stack Developer</strong>
-                    👨🏻‍💻{" "}
-                    situato a <strong className="text-[#3b83bd]">Bergamo</strong>
-                    🌍
-                  </p>
-                  <p className="mt-2">
-                    Sono un ragazzo creativo, ambizioso e determinato. Ho un <br /> diploma in Sistemi Informativi
-                    Aziendali e ho ottime capacità <br /> di lavorare in un team.
-                  </p>
-                </div>
-                <hr className="mt-5 mb-5 h-1 bg-[#3b83bd]" />
-                <div className="flex flex-wrap justify-center gap-4">
-                  <InfoCard
-                    imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcnZoKyWdFLJh6TNAlU4Y8QEAUVhISRa8J9g&s"
-                    title="Servizi Inf. Aziendali"
-                    description="Diploma"
-                    onClick={() =>
-                      handleOpen(
-                        "https://islotto.edu.it/indirizzo-di-studio/ite-sistemi-informativi-aziendali-sia/"
-                      )
-                    }
-                  />
-                  <InfoCard
-                    imageUrl="https://www.eventi-digitali.online/media/public/38/Logo-JAC.jpg"
-                    title="Web Development"
-                    description="Diploma ITS"
-                    onClick={() =>
-                      handleOpen("https://jac-its.it/corso/web-development/")
-                    }
-                  />
-                  <CardNumber title="7+" description="Linguaggi di Programmazione" />
-                  <CardNumber title="3" description="Progetti Completati" />
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Card, CardBody, Typography } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons";
-import "./elements/Css/Skills.css";
+import "../Css/Skills.css";
 import 'aos/dist/aos.css';
 import Aos from "aos";
 

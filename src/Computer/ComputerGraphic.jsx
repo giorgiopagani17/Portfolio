@@ -1,16 +1,16 @@
-import Navbar from "../pages/elements/Navbar.jsx"
-import About from "../pages/About.jsx"
-import Contact from "../pages/Contact.jsx"
-import Home from "../pages/Home.jsx"
-import Projects from "../pages/Projects.jsx"
-import Skills from "../pages/Skills.jsx"
+import Navbar from "../Elements/Navbar.jsx"
+import About from "../Portfolio/About.jsx"
+import Contact from "../Portfolio/Contact.jsx"
+import Home from "../Portfolio/Home.jsx"
+import Projects from "../Portfolio/Projects.jsx"
+import Skills from "../Portfolio/Skills.jsx"
 
 const Computer = () => {
 
 
     return (
         <>
-            <Navbar/>
+            <Navbar/> 
             <Home />
             <About />
             <Skills />
