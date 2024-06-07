@@ -1,0 +1,16 @@
+@keyframes shake {
+    0% {
+      transform: translateX(-10px);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    100% {
+      transform: translateX(-10px);
+    }
+  }
+  
+  .shake-animation {
+    animation: shake 2s infinite; /* Modifica la durata e altre proprietà dell'animazione se necessario */
+  }
+  

@@ -9,6 +9,7 @@ import { faEnvelope, faDownload, faArrowDown } from '@fortawesome/free-solid-svg
 import "../Css/Home.css";
 import 'aos/dist/aos.css';
 import Aos from "aos";
+import { Link } from 'react-scroll';
 
 const Home = () => {
   const [typedText, setTypedText] = useState('');
@@ -78,13 +79,20 @@ const Home = () => {
     return () => clearInterval(typeInterval);
   }, [index, isTyping]);
 
+  const scrollToAboutSection = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+  
   return (
     <div id="home">
-        <div className="flex items-center justify-center min-h-screen gap-x-[10%]">
+        <div className="flex items-center justify-center min-h-screen gap-x-[10%] mt-[-2%]">
           <Card color="transparent" shadow={false} className="slide-in-left">
             <CardBody className="mb-6 pl-5 text-white">
-              <p><strong className="text-white text-4xl">I'm Giorgio Pagani</strong></p>
-              <p className="mt-3"><strong id="text" className="text-[#3b83bd] text-2xl">{typedText}</strong></p>
+              <p><strong className="text-white text-5xl">I'm Giorgio Pagani</strong></p>
+              <p className="mt-3 h-7"><strong id="text" className="text-[#3b83bd] text-3xl">{typedText}</strong></p>
               <p className="mt-10">Sono un full-stack developer specializzato in React e Python</p>
               <div className="mt-10">
 
@@ -134,6 +142,17 @@ const Home = () => {
               </button>
             </CardBody>
           </Card>
+        </div>
+        <div className="absolute flex flex-col items-center justify-center w-[100%]">
+          <div className="absolute bottom-12 text-[#3b83bd] text-2xl animate-bounce whitespace-nowrap">
+            <Link to="about" smooth={true} spy={true} duration={500} offset={-50}>
+              <FontAwesomeIcon
+                icon={faArrowDown}
+                className="ml-2 mb-8"
+                onClick={scrollToAboutSection}
+              />
+            </Link>
+          </div>
         </div>
     </div>
   );

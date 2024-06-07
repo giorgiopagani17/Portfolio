@@ -47,7 +47,7 @@ const About = () => {
   );
 
   return (
-    <div className="min-h-screen bg-white" id="about">
+    <div className="bg-white" id="about">
         <div className="w-full overflow-hidden">
             <svg
             id="svg"
@@ -66,7 +66,7 @@ const About = () => {
             ></path>
             </svg>
         </div>
-        <div className="text-center text-[#3b83bd] text-6xl mb-10">
+        <div className="text-center text-[#3b83bd] text-6xl mb-8">
             <div className="relative flex flex-col justify-center items-center">
             <div className="absolute mb-10 text-[#0A0436] opacity-25 blur-[3px] text-[125%] font-bold">
                 About Me
@@ -78,9 +78,9 @@ const About = () => {
         </div>
         <div className="flex justify-center items-center">
             <div className="flex flex-col items-center" data-aos="fade-up">
-                <div className="flex">
+                <div className="flex mb-10">
                     <img
-                        src="./public/fotocartoon.jpg"
+                        src="./file/fotocartoon.jpg"
                         className="w-96 rounded-full mr-5"
                         alt="Giorgio Pagani"
                     />

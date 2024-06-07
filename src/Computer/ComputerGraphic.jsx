@@ -9,14 +9,13 @@ const Computer = () => {
 
 
     return (
-        <>
-            <Navbar/> 
+        <div className="overflow-x-hidden max-w-full">
             <Home />
             <About />
             <Skills />
             <Projects />
             <Contact />
-        </>
+        </div>
     );
 
 };
