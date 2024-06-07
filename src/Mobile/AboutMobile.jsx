@@ -71,7 +71,7 @@ const About = () => {
             <CardBody>
               <div className="flex items-center justify-center">
                 <img
-                  src="./file/fotocartoon.jpg"
+                  src="./public/fotocartoon.jpg"
                   className="w-96 rounded-full"
                   alt="Giorgio Pagani"
                 />

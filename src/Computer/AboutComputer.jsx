@@ -80,7 +80,7 @@ const About = () => {
             <div className="flex flex-col items-center" data-aos="fade-up">
                 <div className="flex">
                     <img
-                        src="./file/fotocartoon.jpg"
+                        src="./public/fotocartoon.jpg"
                         className="w-96 rounded-full mr-5"
                         alt="Giorgio Pagani"
                     />
