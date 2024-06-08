@@ -91,7 +91,7 @@ const About = () => {
                             </p>
                             <p className="mt-2 text-center">
                                 Sono un ragazzo creativo, ambizioso e determinato. Ho un diploma in Sistemi Informativi
-                                Aziendali e ho ottime capacità di lavorare in un team.
+                                Aziendali e ottime capacità di lavorare in un team.
                             </p>
                         </div>
                         <hr className="mt-5 mb-5 h-1 bg-[#3b83bd]" />
