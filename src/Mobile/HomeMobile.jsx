@@ -84,7 +84,7 @@ const Home = () => {
   return (
     <div id="home">
         <div className="flex items-center justify-center min-h-screen gap-x-[10%] mt-[-2%]">
-          <Card color="transparent" shadow={false} className="slide-in-left mt-10">
+          <Card color="transparent" shadow={false} className="slide-in-left">
             <CardBody className="mb-6 pl-5 text-white md:text-center">
               <p><strong className="text-white text-5xl md:text-7xl lg:text-8xl">I'm Giorgio Pagani</strong></p>
               <p className="mt-3 h-7"><strong id="text" className="text-[#3b83bd] text-3xl md:text-5xl lg:text-6xl">{typedText}</strong></p>
@@ -143,7 +143,7 @@ const Home = () => {
             <Link to="about" smooth={true} spy={true} duration={500} offset={-50}>
               <FontAwesomeIcon
                 icon={faArrowDown}
-                className="ml-2 mb-1"
+                className="ml-2 mb-5"
                 onClick={scrollToAboutSection}
               />
             </Link>
