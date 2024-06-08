@@ -137,7 +137,7 @@ const Home = () => {
           </CardBody>
         </Card>
         <div className="slide-in-right">
-          <img src="/web.png"/>
+          <img src="../../file/web.png"/>
         </div>
         <div className="absolute min-h-screen flex flex-col items-center justify-center">
             <div className="absolute bottom-5 text-[#3b83bd] text-2xl animate-bounce whitespace-nowrap" onClick={scrollToAboutSection}>
