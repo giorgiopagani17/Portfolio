@@ -103,7 +103,7 @@ const Nav = () => {
           smooth={true}
           spy={true}
           duration={500}
-          className="flex items-center font-bold text-base"
+          className="cursor-pointer flex items-center font-bold text-base"
         >
           <FontAwesomeIcon icon={faHouse} className="mr-1.5"/> 
           Home
@@ -120,7 +120,7 @@ const Nav = () => {
           smooth={true}
           spy={true}
           duration={500}
-          className="flex items-center font-bold text-base"
+          className="cursor-pointer flex items-center font-bold text-base"
         >          
         <FontAwesomeIcon icon={faUser} className="mr-1.5"/>
           About
@@ -137,7 +137,7 @@ const Nav = () => {
           smooth={true}
           spy={true}
           duration={500}
-          className="flex items-center font-bold text-base"
+          className="cursor-pointer flex items-center font-bold text-base"
         >
           <FontAwesomeIcon icon={faLayerGroup} className="mr-1.5"/>
           Skills
@@ -154,7 +154,7 @@ const Nav = () => {
           smooth={true}
           spy={true}
           duration={500}
-          className="flex items-center font-bold text-base"
+          className="cursor-pointer flex items-center font-bold text-base"
         >
           <FontAwesomeIcon icon={faDiagramProject} className="mt-0.5 mr-1.5"/>
           Projects
@@ -171,7 +171,7 @@ const Nav = () => {
           smooth={true}
           spy={true}
           duration={500}
-          className="flex items-center font-bold text-base"
+          className="cursor-pointer flex items-center font-bold text-base"
         >
           <FontAwesomeIcon icon={faMessage} className="mt-0.5 mr-1.5"/>
           Contact
@@ -196,7 +196,7 @@ const Nav = () => {
             <div className="hidden lg:block">{navList}</div>
             <IconButton
               variant="text"
-              className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+              className="cursor-pointer ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
               ripple={false}
               onClick={() => setOpenNav(!openNav)}
             >

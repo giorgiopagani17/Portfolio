@@ -118,7 +118,7 @@ const Contact = () => {
                             />
                         </div>
                         <div className="mt-3">
-                            <button id="button" className="text-white mt-5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            <button id="button" className="text-white mt-5 bg-[#3b83bd] hover:bg-[#3b83bd] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                 onClick={handleDownloadClick} 
                                 onMouseEnter={() => setIsDownloadHovered(true)} 
                                 onMouseLeave={() => setIsDownloadHovered(false)} 
@@ -205,7 +205,7 @@ const Contact = () => {
                             <button
                                 id="button" 
                                 type="submit" 
-                                className="text-white mt-5 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                className="text-white mt-5 focus:ring-4 bg-[#3b83bd] hover:bg-[#3b83bd] focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                 onMouseEnter={() => setIsConfirmHovered(true)} 
                                 onMouseLeave={() => setIsConfirmHovered(false)}
                             >

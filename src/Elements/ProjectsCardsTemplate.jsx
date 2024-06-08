@@ -24,7 +24,7 @@ const Card = ({ title, content, image, tech1, techimage1, tech2, techimage2, tec
       <p className="text-gray-700 mt-3">{content}</p>
       <div>
 
-        <button id="button" className="ml-2 text-white text-base mt-5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-2.5 py-2 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        <button id="button" className="ml-2 text-white text-base mt-5 bg-[#3b83bd] hover:bg-[#3b83bd] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-2.5 py-2 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           onMouseEnter={() => setIsHoveringCode(true)}
           onMouseLeave={() => setIsHoveringCode(false)}
           onClick={() => handleClick({repository})} 
