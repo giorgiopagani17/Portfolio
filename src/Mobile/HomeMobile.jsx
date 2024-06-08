@@ -143,7 +143,7 @@ const Home = () => {
             <Link to="about" smooth={true} spy={true} duration={500} offset={-50}>
               <FontAwesomeIcon
                 icon={faArrowDown}
-                className="ml-2 mb-8"
+                className="ml-2 mb-1"
                 onClick={scrollToAboutSection}
               />
             </Link>
