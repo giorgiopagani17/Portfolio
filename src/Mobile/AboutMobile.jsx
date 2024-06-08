@@ -74,7 +74,7 @@ const About = () => {
         <div className="flex justify-center items-center">
             <div className="flex flex-col items-center" data-aos="fade-up">
                     <img
-                        src="../../file/fotocartoon.jpg"
+                        src="/fotocartoon.jpg"
                         className="w-96 rounded-full"
                         alt="Giorgio Pagani"
                         style={{ transform: 'scale(0.97)', transformOrigin: 'top' }}

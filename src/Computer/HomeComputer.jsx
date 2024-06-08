@@ -86,7 +86,7 @@ const Home = () => {
       <div className="flex items-center justify-center min-h-screen gap-x-[10%] mt-10">
         <Card color="transparent" shadow={false} className="slide-in-left">
           <CardBody className="mb-6 pl-5 text-white">
-            <p><strong className="text-white text-6xl">I'm Giorgio Pagani</strong></p>
+            <p><strong className="text-white text-6xl w-40">I'm Giorgio Pagani</strong></p>
             <p className="mt-3 h-10 w-40"><strong id="text" className="text-[#3b83bd] text-5xl">{typedText}</strong></p>
             <p className="mt-10">Sono un full-stack developer specializzato in React e Python</p>
             <div className="mt-10">
@@ -127,7 +127,7 @@ const Home = () => {
                 onMouseLeave={handleIconMouseLeave} 
               />
             </div>
-            <button id="button" className="text-white mt-10 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            <button id="button" className="text-white mt-10 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               onClick={handleDownloadClick} 
               onMouseEnter={() => setIsDownloadHovered(true)} 
               onMouseLeave={() => setIsDownloadHovered(false)} 
@@ -136,8 +136,8 @@ const Home = () => {
             </button>
           </CardBody>
         </Card>
-        <div className="slide-in-right">
-          <img src="../../file/web.png"/>
+        <div className="slide-in-right pr-2">
+          <img src="/web.png"/>
         </div>
         <div className="absolute min-h-screen flex flex-col items-center justify-center">
             <div className="absolute bottom-5 text-[#3b83bd] text-2xl animate-bounce whitespace-nowrap" onClick={scrollToAboutSection}>
