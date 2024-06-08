@@ -129,7 +129,7 @@ const Contact = () => {
                         </div>
                     </div>
                     <div className="mb-6 pl-5 w-96 mt-10" data-aos="fade-right">
-                        <form className="max-w-sm mx-auto p-1" onSubmit={handleSubmit}>
+                        <form className="max-w-sm mx-auto pr-1" onSubmit={handleSubmit}>
                             <label htmlFor="email" className="mt-5 block mb-2 text-base font-medium text-gray-900 dark:text-white">Email</label>
                             <div className="relative max-w-full pr-1">
                                 <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
