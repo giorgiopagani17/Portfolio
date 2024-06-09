@@ -108,3 +108,14 @@
   animation: bounce 2s infinite;
 }
 
+@media (min-height: 600px) {
+  .custom-min-height {
+    min-height: 100vh;
+  }
+}
+
+@media (max-height: 600px) {
+  .custom-min-height {
+    min-height: 600px;
+  }
+}

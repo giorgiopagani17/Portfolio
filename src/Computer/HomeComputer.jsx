@@ -83,7 +83,7 @@ const Home = () => {
 
   return (
     <div id="home">
-      <div className="flex items-center justify-center min-h-screen gap-x-[10%] mt-10">
+      <div class="flex items-center justify-center custom-min-height gap-x-[10%] mt-[-2%]">
         <Card color="transparent" shadow={false} className="slide-in-left">
           <CardBody className="mb-6 pl-5 text-white">
             <p><strong className="text-white text-6xl w-40">I'm Giorgio Pagani</strong></p>
