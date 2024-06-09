@@ -80,7 +80,7 @@ const About = () => {
                         style={{ transform: 'scale(0.97)', transformOrigin: 'top' }}
                     />
                     <div className="ml-5 mr-5 flex flex-col justify-center">
-                        <div className="ml-5 mr-5 text-lg">
+                        <div className="ml-5 mr-5 text-lg" data-aos="fade-right">
                             <p className="text-xl text-center mt-5">
                                 <p className="text-3xl mb-1">
                                 Ciao👋🏼
@@ -94,8 +94,8 @@ const About = () => {
                                 Aziendali e ottime capacità di lavorare in un team.
                             </p>
                         </div>
-                        <hr className="mt-5 mb-5 h-1 bg-[#3b83bd]" />
-                        <div className="flex flex-wrap justify-center gap-4 mb-10">
+                        <hr className="mt-5 mb-5 h-1 bg-[#3b83bd]" data-aos="fade-up"/>
+                        <div className="flex flex-wrap justify-center gap-4 mb-10" data-aos="fade-left">
                             <InfoCard
                                 imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcnZoKyWdFLJh6TNAlU4Y8QEAUVhISRa8J9g&s"
                                 title="Servizi Inf. Aziendali"
