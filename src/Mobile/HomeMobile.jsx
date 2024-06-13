@@ -9,6 +9,7 @@ import { faEnvelope, faDownload, faArrowDown } from '@fortawesome/free-solid-svg
 import "../Css/Home.css";
 import 'aos/dist/aos.css';
 import { Link } from 'react-scroll';
+import { scroller } from 'react-scroll';
 
 const Home = () => {
   const [typedText, setTypedText] = useState('');
@@ -75,10 +76,12 @@ const Home = () => {
   }, [index, isTyping]);
 
   const scrollToAboutSection = () => {
-    const aboutSection = document.getElementById("about");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    scroller.scrollTo('about', {
+      smooth: true,
+      spy: true,
+      duration: 500,
+      offset: -50
+    });
   };
   
   return (
@@ -144,14 +147,12 @@ const Home = () => {
         </div>
         <div className="absolute flex flex-col items-center justify-center w-[100%]">
           <div className="absolute bottom-12 text-[#3b83bd] text-2xl animate-bounce whitespace-nowrap">
-            <Link to="about" smooth={true} spy={true} duration={500} offset={-50}>
-              <FontAwesomeIcon
-                icon={faArrowDown}
-                className="ml-2 mb-6"
-                onClick={scrollToAboutSection}
-                href="#about"
-              />
-            </Link>
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="ml-2 mb-6"
+              onClick={scrollToAboutSection}
+              href="#about"
+            />
           </div>
         </div>
     </div>
