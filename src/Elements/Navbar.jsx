@@ -198,6 +198,7 @@ const Nav = () => {
               className="cursor-pointer ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
               ripple={false}
               onClick={() => setOpenNav(!openNav)}
+              aria-label={openNav ? "Close navigation menu" : "Open navigation menu"}
             >
               {openNav ? (
                 <svg
