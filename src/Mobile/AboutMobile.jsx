@@ -89,7 +89,7 @@ const About = () => {
                     Sono <strong className="text-[#3b83bd]" itemProp="name">Giorgio Pagani</strong>!
                   </span>
                 </h1>
-                <h2>
+                <h2 itemProp="description">
                   <span className="inline-block whitespace-nowrap">
                     Un <strong className="text-[#3b83bd]" itemProp="jobTitle">Full-Stack Developer👨🏻‍💻 </strong>
                   </span>

@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Navbar,
-  MobileNav,
-  Typography,
-  IconButton,
-} from "@material-tailwind/react";
+import { Navbar, Typography, IconButton, Collapse } from "@material-tailwind/react";
 import "../Css/Navbar.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -103,6 +98,7 @@ const Nav = () => {
           spy={true}
           duration={500}
           className="cursor-pointer flex items-center font-bold text-base"
+          href="#home"
         >
           <FontAwesomeIcon icon={faHouse} className="mr-1.5" />
           Home
@@ -120,6 +116,7 @@ const Nav = () => {
           spy={true}
           duration={500}
           className="cursor-pointer flex items-center font-bold text-base"
+          href="#about"
         >
           <FontAwesomeIcon icon={faUser} className="mr-1.5" />
           About
@@ -137,6 +134,7 @@ const Nav = () => {
           spy={true}
           duration={500}
           className="cursor-pointer flex items-center font-bold text-base"
+          href="#skills"
         >
           <FontAwesomeIcon icon={faLayerGroup} className="mr-1.5" />
           Skills
@@ -154,6 +152,7 @@ const Nav = () => {
           spy={true}
           duration={500}
           className="cursor-pointer flex items-center font-bold text-base"
+          href="#projects"
         >
           <FontAwesomeIcon icon={faDiagramProject} className="mt-0.5 mr-1.5" />
           Projects
@@ -171,6 +170,7 @@ const Nav = () => {
           spy={true}
           duration={500}
           className="cursor-pointer flex items-center font-bold text-base"
+          href="#contact"
         >
           <FontAwesomeIcon icon={faMessage} className="mt-0.5 mr-1.5" />
           Contact
@@ -232,9 +232,9 @@ const Nav = () => {
             </IconButton>
           </div>
         </div>
-        <MobileNav open={openNav}>
+        <Collapse open={openNav}>
           {navList}
-        </MobileNav>
+        </Collapse>
       </Navbar>
     </div>
   );

@@ -83,7 +83,7 @@ const Home = () => {
   
   return (
     <div id="home" itemScope itemType="http://schema.org/Person">
-        <div class="flex items-center justify-center custom-min-height gap-x-[10%] mt-[-2%]" itemProp="mainContentOfPage">
+        <div className="flex items-center justify-center custom-min-height gap-x-[10%] mt-[-2%]" itemProp="mainContentOfPage">
           <Card color="transparent" shadow={false} className="slide-in-left">
             <CardBody className="mb-6 pl-5 text-white md:text-center">
               <h1><strong className="text-white text-5xl md:text-7xl lg:text-8xl">I'm Giorgio Pagani</strong></h1>
@@ -149,6 +149,7 @@ const Home = () => {
                 icon={faArrowDown}
                 className="ml-2 mb-6"
                 onClick={scrollToAboutSection}
+                href="#about"
               />
             </Link>
           </div>
