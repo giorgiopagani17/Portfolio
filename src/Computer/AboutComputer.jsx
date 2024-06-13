@@ -1,4 +1,3 @@
-import React from "react";
 import { Card } from "@material-tailwind/react";
 import "animate.css";
 import 'aos/dist/aos.css';

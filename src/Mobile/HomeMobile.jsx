@@ -8,7 +8,6 @@ import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-
 import { faEnvelope, faDownload, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import "../Css/Home.css";
 import 'aos/dist/aos.css';
-import { Link } from 'react-scroll';
 import { scroller } from 'react-scroll';
 
 const Home = () => {

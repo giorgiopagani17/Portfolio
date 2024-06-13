@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Navbar, Typography, IconButton, Collapse } from "@material-tailwind/react";
 import "../Css/Navbar.css";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faUser, faDiagramProject, faMessage, faLayerGroup } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-scroll';
@@ -9,7 +9,6 @@ import { Link } from 'react-scroll';
 const Nav = () => {
   const [openNav, setOpenNav] = useState(false);
   const [activeLink, setActiveLink] = useState("");
-  const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
@@ -60,18 +59,6 @@ const Nav = () => {
     }
 
   }, [location]);
-
-  const handleLinkClick = (link) => {
-    setActiveLink(link);
-
-    if (link === "home") {
-      navigate("/");
-    } else {
-      navigate("/" + link);
-    }
-
-    setOpenNav(false);
-  };
 
   const handleResize = () => {
     if (window.innerWidth > 768) {

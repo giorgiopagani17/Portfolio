@@ -1,4 +1,3 @@
-import React from 'react';
 import Slider from '../Elements/Slider.jsx';
 import 'aos/dist/aos.css';
 

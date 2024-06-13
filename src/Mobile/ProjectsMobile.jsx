@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import Slider from '../Elements/Slider.jsx';
 import 'aos/dist/aos.css';
 import '../Css/Projects.css';
