@@ -1,28 +1,28 @@
-import React, { useEffect, Suspense } from "react";
+import React, { useEffect } from "react";
+import About from "./Components/About.jsx"
+import Contact from "./Components/Contact.jsx"
+import Home from "./Components/Home.jsx"
+import Projects from "./Components/Projects.jsx"
+import Skills from "./Components/Skills.jsx"
 import Aos from "aos";
 
-const LazyAbout = React.lazy(() => import("./Components/About.jsx"));
-const LazyContact = React.lazy(() => import("./Components/Contact.jsx"));
-const LazyHome = React.lazy(() => import("./Components/Home.jsx"));
-const LazyProjects = React.lazy(() => import("./Components/Projects.jsx"));
-const LazySkills = React.lazy(() => import("./Components/Skills.jsx"));
-
 const Portfolio = () => {
+
     useEffect(() => {
         Aos.init();
-    }, []);
+      }, []);
+    
 
     return (
         <div className="overflow-x-hidden max-w-full">
-            <Suspense fallback={<div>Loading...</div>}>
-                <LazyHome />
-                <LazyAbout />
-                <LazySkills />
-                <LazyProjects />
-                <LazyContact />
-            </Suspense>
+            <Home />
+            <About />
+            <Skills />
+            <Projects />
+            <Contact />
         </div>
     );
+
 };
 
 export default Portfolio;
