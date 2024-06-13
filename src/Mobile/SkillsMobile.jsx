@@ -27,10 +27,10 @@ const Skills = () => {
             <div className="text-center text-black text-6xl mt-10">
                 <div className="relative flex flex-col justify-center items-center" data-aos="zoom-in-down">
                     <div className="inline-block whitespace-nowrap absolute mb-10 text-[#3b83bd] opacity-25 blur-[3px] text-7xl font-bold">
-                        My Skills
+                        <h1>My Skills</h1>
                     </div>
                     <div className="relative text-[#3b83bd] text-6xl font-bold">
-                        My Skills
+                        <h1>My Skills</h1>
                     </div>
                 </div>
             </div>
@@ -58,190 +58,29 @@ const Skills = () => {
                     <Typography variant="h5" color="blue-gray" className="mb-2">
                         {message === "Language" && (
                             <div className="grid grid-cols-3 gap-5" data-aos="flip-right">
-                            <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
-                                <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
-                                    <div className="flex items-center justify-center h-full">
-                                        <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" />
-                                    </div>
-                                </div>
-                                <p>Html</p>
-                                <p className="text-sm text-[#3b83bd]">Advanced</p>
-                            </div>
-                            
-                            <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
-                                <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
-                                    <div className="flex items-center justify-center h-full">
-                                        <img src="https://static-00.iconduck.com/assets.00/file-type-css-icon-1806x2048-r5fwjl3p.png" />
-                                    </div>
-                                </div>
-                                <p>Css</p>
-                                <p className="text-sm text-[#3b83bd]">Intermediate</p>
-                            </div>
-            
-                            <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
-                                <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
-                                    <div className="flex items-center justify-center h-full">
-                                        <img src="https://static-00.iconduck.com/assets.00/javascript-js-icon-2048x2048-nyxvtvk0.png" />
-                                    </div>
-                                </div>
-                                <p>JavaScript</p>
-                                <p className="text-sm text-[#3b83bd]">Advanced</p>
-                            </div>
-            
-                            <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
-                                <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
-                                    <div className="flex items-center justify-center h-full">
-                                        <img src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png" />
-                                    </div>
-                                </div>
-                                <p>Node.js</p>
-                                <p className="text-sm text-[#3b83bd]">Intermediate</p>
-                            </div>
-            
-                            <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
-                                <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
-                                    <div className="flex items-center justify-center h-full">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" />
-                                    </div>
-                                </div>
-                                <p>React</p>
-                                <p className="text-sm text-[#3b83bd]">Intermediate</p>
-                            </div>
-            
-                            <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
-                                <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
-                                    <div className="flex items-center justify-center h-full">
-                                        <img src="https://cdn.freebiesupply.com/logos/large/2x/python-5-logo-png-transparent.png" />
-                                    </div>
-                                </div>
-                                <p>Python</p>
-                                <p className="text-sm text-[#3b83bd]">Intermediate</p>
-                            </div>
-            
-            
-                            <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
-                                <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
-                                    <div className="flex items-center justify-center h-full">
-                                        <img src="https://cdn.runalloy.com/landing/uploads-new/mysql_PNG_23_06dd9edb0c.png" />
-                                    </div>
-                                </div>
-                                <p>MySql</p>
-                                <p className="text-sm text-[#3b83bd]">Advanced</p>
-                            </div>
-            
-                            <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
-                                <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
-                                    <div className="flex items-center justify-center h-full">
-                                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968332.png" />
-                                    </div>
-                                </div>
-                                <p>Php</p>
-                                <p className="text-sm text-[#3b83bd]">Intermediate</p>
-                            </div>
-                            
-                            <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
-                                <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
-                                    <div className="flex items-center justify-center h-full">
-                                        <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png" />
-                                    </div>
-                                </div>
-                                <p>Java</p>
-                                <p className="text-sm text-[#3b83bd]">Base</p>
-                            </div>
+                                <SkillItem logoUrl="https://cdn-icons-png.flaticon.com/512/732/732212.png" name="Html" level="Advanced" />
+                                <SkillItem logoUrl="https://static-00.iconduck.com/assets.00/file-type-css-icon-1806x2048-r5fwjl3p.png" name="Css" level="Intermediate" />
+                                <SkillItem logoUrl="https://static-00.iconduck.com/assets.00/javascript-js-icon-2048x2048-nyxvtvk0.png" name="JavaScript" level="Advanced" />
+                                <SkillItem logoUrl="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png" name="Node.js" level="Intermediate" />
+                                <SkillItem logoUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" name="React" level="Intermediate" />
+                                <SkillItem logoUrl="https://cdn.freebiesupply.com/logos/large/2x/python-5-logo-png-transparent.png" name="Python" level="Intermediate" />
+                                <SkillItem logoUrl="https://cdn.runalloy.com/landing/uploads-new/mysql_PNG_23_06dd9edb0c.png" name="MySql" level="Advanced" />
+                                <SkillItem logoUrl="https://cdn-icons-png.flaticon.com/512/5968/5968332.png" name="Php" level="Intermediate" />
+                                <SkillItem logoUrl="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png" name="Java" level="Base" />
                             </div>
                         )}
                     
                         {message === "Tools" && (
                             <div className="grid grid-cols-3 gap-5" data-aos="flip-left">
-                                <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
-                                    <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
-                                        <div className="flex items-center justify-center h-full">
-                                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
-                                        </div>
-                                    </div>
-                                    <p>GitHub</p>
-                                    <p className="text-sm text-[#3b83bd]">Intermediate</p>
-                                </div>
-                                
-                                <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
-                                    <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
-                                        <div className="flex items-center justify-center h-full">
-                                            <img src="https://www.netcost-security.fr/wp-content/uploads/2022/10/Visual-Studio-Code-est-un-editeur-de-code-solide-pour.png" />
-                                        </div>
-                                    </div>
-                                    <p>VS Code</p>
-                                    <p className="text-sm text-[#3b83bd]">Advanced</p>
-                                </div>
-                
-                                <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
-                                    <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
-                                        <div className="flex items-center justify-center h-full">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/2048px-IntelliJ_IDEA_Icon.svg.png" />
-                                        </div>
-                                    </div>
-                                    <p>IntellIJ</p>
-                                    <p className="text-sm text-[#3b83bd]">Intermediate</p>
-                                </div>
-                
-                                <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
-                                    <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
-                                        <div className="flex items-center justify-center h-full">
-                                            <img src="https://cdn.icon-icons.com/icons2/1381/PNG/512/xampp_94513.png" />
-                                        </div>
-                                    </div>
-                                    <p>Xampp</p>
-                                    <p className="text-sm text-[#3b83bd]">Intermediate</p>
-                                </div>
-                
-                                <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
-                                    <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
-                                        <div className="flex items-center justify-center h-full">
-                                            <img src="https://www.geekandjob.com/uploads/wiki/c620b14fbbc044bda55703f69c04b565.png" />
-                                        </div>
-                                    </div>
-                                    <p>Mamp</p>
-                                    <p className="text-sm text-[#3b83bd]">Intermediate</p>
-                                </div>
-                
-                                <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
-                                    <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
-                                        <div className="flex items-center justify-center h-full">
-                                            <img src="https://cdn.iconscout.com/icon/free/png-256/free-postman-3521648-2945092.png?f=webp" />
-                                        </div>
-                                    </div>
-                                    <p>PostMan</p>
-                                    <p className="text-sm text-[#3b83bd]">Advanced</p>
-                                </div>
-                                
-                                <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
-                                    <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
-                                        <div className="flex items-center justify-center h-full">
-                                            <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" />
-                                        </div>
-                                    </div>
-                                    <p>Git</p>
-                                    <p className="text-sm text-[#3b83bd]">Intermediate</p>
-                                </div>
-                                
-                                <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
-                                    <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
-                                        <div className="flex items-center justify-center h-full">
-                                            <img src="https://iconape.com/wp-content/png_logo_vector/bootstrap-framework-logo.png" />
-                                        </div>
-                                    </div>
-                                    <p>Bootstrap</p>
-                                    <p className="text-sm text-[#3b83bd]">Intermediate</p>
-                                </div>
-                
-                                <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
-                                    <div id="icon" className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
-                                        <div className="flex items-center justify-center h-full">
-                                            <img src="https://static-00.iconduck.com/assets.00/tailwind-css-icon-2048x1229-u8dzt4uh.png" />
-                                        </div>
-                                    </div>
-                                    <p>Tailwind</p>
-                                    <p className="text-sm text-[#3b83bd]">Intermediate</p>
-                                </div>
+                                <SkillItem logoUrl="https://cdn-icons-png.flaticon.com/512/25/25231.png" name="GitHub" level="Intermediate" />
+                                <SkillItem logoUrl="https://www.netcost-security.fr/wp-content/uploads/2022/10/Visual-Studio-Code-est-un-editeur-de-code-solide-pour.png" name="VS Code" level="Advanced" />
+                                <SkillItem logoUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/2048px-IntelliJ_IDEA_Icon.svg.png" name="IntellIJ" level="Intermediate" />
+                                <SkillItem logoUrl="https://cdn.icon-icons.com/icons2/1381/PNG/512/xampp_94513.png" name="Xampp" level="Intermediate" />
+                                <SkillItem logoUrl="https://www.geekandjob.com/uploads/wiki/c620b14fbbc044bda55703f69c04b565.png" name="Mamp" level="Intermediate" />
+                                <SkillItem logoUrl="https://cdn.iconscout.com/icon/free/png-256/free-postman-3521648-2945092.png?f=webp" name="PostMan" level="Advanced" />
+                                <SkillItem logoUrl="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" name="Git" level="Intermediate" />
+                                <SkillItem logoUrl="https://iconape.com/wp-content/png_logo_vector/bootstrap-framework-logo.png" name="Bootstrap" level="Intermediate" />
+                                <SkillItem logoUrl="https://static-00.iconduck.com/assets.00/tailwind-css-icon-2048x1229-u8dzt4uh.png" name="Tailwind" level="Intermediate" />
                             </div>
                         )}
                     
@@ -252,7 +91,7 @@ const Skills = () => {
             <div className="flex flex-col justify-center items-center mt-5 mb-10 text-center" data-aos="fade-left">
                 <div className="flex justify-center items-center">
                     <strong className="text-4xl text-[#3b83bd] flex items-center">
-                    <span>Tech Stack</span>
+                    <h1>Tech Stack</h1>
                     <img 
                         src="https://www.svgrepo.com/show/408381/stack-apps-layers.svg" 
                         width="50px" 
@@ -275,11 +114,22 @@ const Skills = () => {
                     />
                     </strong>
                 </div>
-                <p className="text-white">Ecco i linguaggi di programmazione e <br/> i tools che conosco</p>
+                <h2 className="text-white">Ecco i linguaggi di programmazione e <br/> i tools che conosco</h2>
             </div>
         </div>
     </div>
   );
 };
+
+
+const SkillItem = ({ logoUrl, name, level }) => (
+    <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
+      <div className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
+        <img src={logoUrl} alt={`${name} Logo`} className="w-full h-full object-contain" />
+      </div>
+      <p>{name}</p>
+      <p className="text-sm text-[#3b83bd]">{level}</p>
+    </div>
+);
 
 export default Skills;

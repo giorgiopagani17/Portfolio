@@ -5,7 +5,7 @@ import {
   Typography,
   IconButton,
 } from "@material-tailwind/react";
-import "../Css/Navbar.css"; 
+import "../Css/Navbar.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faUser, faDiagramProject, faMessage, faLayerGroup } from "@fortawesome/free-solid-svg-icons";
@@ -20,21 +20,21 @@ const Nav = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-  
+
       const homePosition = document.getElementById("home").offsetTop;
       const aboutPosition = document.getElementById("about").offsetTop;
       const projectsPosition = document.getElementById("projects").offsetTop;
       const skillsPosition = document.getElementById("skills").offsetTop;
       const contactPosition = document.getElementById("contact").offsetTop;
-  
+
       const distanceToHome = Math.abs(homePosition - scrollPosition);
       const distanceToAbout = Math.abs(aboutPosition - scrollPosition);
       const distanceToProjects = Math.abs(projectsPosition - scrollPosition);
       const distanceToSkills = Math.abs(skillsPosition - scrollPosition);
       const distanceToContact = Math.abs(contactPosition - scrollPosition);
-  
+
       const threshold = 100;
-  
+
       if (distanceToHome < threshold) {
         setActiveLink("home");
       } else if (distanceToAbout < threshold) {
@@ -47,31 +47,29 @@ const Nav = () => {
         setActiveLink("contact");
       }
     };
-  
+
     window.addEventListener("scroll", handleScroll);
-  
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
 
-  
   useEffect(() => {
     const currentPath = location.pathname.slice(1);
-    
-    if(currentPath == ""){
+
+    if (currentPath === "") {
       setActiveLink("home");
     } else {
       setActiveLink(currentPath);
     }
-    
+
   }, [location]);
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
 
-    if(link === "home"){
+    if (link === "home") {
       navigate("/");
     } else {
       navigate("/" + link);
@@ -81,7 +79,7 @@ const Nav = () => {
   };
 
   const handleResize = () => {
-    if (window.innerWidth > 768) { 
+    if (window.innerWidth > 768) {
       setOpenNav(false);
     }
   };
@@ -90,6 +88,7 @@ const Nav = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-20">
       <Typography
@@ -99,13 +98,13 @@ const Nav = () => {
         color="blue-gray"
       >
         <Link
-          to="home"  
+          to="home"
           smooth={true}
           spy={true}
           duration={500}
           className="cursor-pointer flex items-center font-bold text-base"
         >
-          <FontAwesomeIcon icon={faHouse} className="mr-1.5"/> 
+          <FontAwesomeIcon icon={faHouse} className="mr-1.5" />
           Home
         </Link>
       </Typography>
@@ -116,13 +115,13 @@ const Nav = () => {
         color="blue-gray"
       >
         <Link
-          to="about" 
+          to="about"
           smooth={true}
           spy={true}
           duration={500}
           className="cursor-pointer flex items-center font-bold text-base"
-        >          
-        <FontAwesomeIcon icon={faUser} className="mr-1.5"/>
+        >
+          <FontAwesomeIcon icon={faUser} className="mr-1.5" />
           About
         </Link>
       </Typography>
@@ -133,13 +132,13 @@ const Nav = () => {
         color="blue-gray"
       >
         <Link
-          to="skills"  
+          to="skills"
           smooth={true}
           spy={true}
           duration={500}
           className="cursor-pointer flex items-center font-bold text-base"
         >
-          <FontAwesomeIcon icon={faLayerGroup} className="mr-1.5"/>
+          <FontAwesomeIcon icon={faLayerGroup} className="mr-1.5" />
           Skills
         </Link>
       </Typography>
@@ -150,13 +149,13 @@ const Nav = () => {
         color="blue-gray"
       >
         <Link
-          to="projects" 
+          to="projects"
           smooth={true}
           spy={true}
           duration={500}
           className="cursor-pointer flex items-center font-bold text-base"
         >
-          <FontAwesomeIcon icon={faDiagramProject} className="mt-0.5 mr-1.5"/>
+          <FontAwesomeIcon icon={faDiagramProject} className="mt-0.5 mr-1.5" />
           Projects
         </Link>
       </Typography>
@@ -167,13 +166,13 @@ const Nav = () => {
         color="blue-gray"
       >
         <Link
-          to="contact"  
+          to="contact"
           smooth={true}
           spy={true}
           duration={500}
           className="cursor-pointer flex items-center font-bold text-base"
         >
-          <FontAwesomeIcon icon={faMessage} className="mt-0.5 mr-1.5"/>
+          <FontAwesomeIcon icon={faMessage} className="mt-0.5 mr-1.5" />
           Contact
         </Link>
       </Typography>

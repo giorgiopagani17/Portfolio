@@ -86,7 +86,7 @@ const Contact = () => {
             <div className="flex justify-center mt-5">
                 <div>
                     <div className="mt-5 mb-6 pl-5 text-white" data-aos="fade-left">
-                        <p><strong className="text-[#3b83bd] text-6xl">Contattami</strong></p>
+                        <h1><strong className="text-[#3b83bd] text-6xl">Contattami</strong></h1>
                         <p className="text-xl mt-10">Compila il modulo qui sotto per contattarmi, <br/> verrai ricontattato il prima possibile!</p>
                         <div className="mt-10">
                             <FontAwesomeIcon 
@@ -147,6 +147,7 @@ const Contact = () => {
                                     className="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
                                     placeholder="name@gmail.com" 
                                     required 
+                                    itemProp="email"
                                 />
                             </div>
 
@@ -165,7 +166,8 @@ const Contact = () => {
                                     onChange={handleChange} 
                                     className="bg-gray-50 border border-blue-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
                                     placeholder="Mario Rossi" 
-                                    required 
+                                    required
+                                    itemProp="name"
                                 />
                             </div>
 
@@ -184,7 +186,8 @@ const Contact = () => {
                                     onChange={handleChange} 
                                     className="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
                                     placeholder="Collaborazione" 
-                                    required 
+                                    required
+                                    itemProp="subject"
                                 />
                             </div>
                             
@@ -198,7 +201,8 @@ const Contact = () => {
                                         onChange={handleChange} 
                                         className="block p-2.5 w-full text-bas bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
                                         placeholder="Ciao Giorgio, vorrei collaborare con te..." 
-                                        required 
+                                        required
+                                        itemProp="text"
                                     ></textarea>
                                 </div>
                             {status && <p className="mt-4 text-white">{status}</p>}

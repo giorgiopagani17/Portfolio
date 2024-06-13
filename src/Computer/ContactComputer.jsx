@@ -85,7 +85,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center justify-center gap-x-[15%] mb-10" >
                 <div className="pl-5 text-white" data-aos="fade-right">
-                    <p><strong className="text-[#3b83bd] text-6xl">Contattami</strong></p>
+                    <h1 className="text-[#3b83bd] text-6xl font-bold">Contattami</h1>
                     <p className="text-xl mt-10">Compila il modulo alla tua destra per contattarmi, <br/> verrai ricontattato il prima possibile!</p>
                     <div className="mt-10">
                         <FontAwesomeIcon 
@@ -96,6 +96,7 @@ const Contact = () => {
                             onClick={() => handleClick("https://www.instagram.com/_giorgiopagani_/")} 
                             onMouseEnter={() => handleIconMouseEnter('instagram')} 
                             onMouseLeave={handleIconMouseLeave} 
+                            alt="Instagram"
                         />
                         <FontAwesomeIcon 
                             icon={faLinkedin} 
@@ -105,6 +106,7 @@ const Contact = () => {
                             onClick={() => handleClick("https://www.linkedin.com/in/giorgio-pagani-5ab4b42b1/")} 
                             onMouseEnter={() => handleIconMouseEnter('linkedin')} 
                             onMouseLeave={handleIconMouseLeave} 
+                            alt="LinkedIn"
                         />
                         <FontAwesomeIcon 
                             icon={faGithub} 
@@ -114,6 +116,7 @@ const Contact = () => {
                             onClick={() => handleClick("https://github.com/giorgiopagani17")} 
                             onMouseEnter={() => handleIconMouseEnter('github')} 
                             onMouseLeave={handleIconMouseLeave} 
+                            alt="GitHub"
                         />
                     </div>
                     <div className="mt-3">
@@ -123,17 +126,19 @@ const Contact = () => {
                             onMouseLeave={() => setIsDownloadHovered(false)} 
                         >
                             Download Cv 
-                            <FontAwesomeIcon icon={faDownload} size="sm" className="ml-2" style={{ color: "#ffffff", animation: isDownloadHovered ? "bounce 1s infinite" : "none", transition: "transform 0.2s ease-in-out" }} />
+                            <FontAwesomeIcon icon={faDownload} size="sm" className="ml-2" style={{ color: "#ffffff", animation: isDownloadHovered ? "bounce 1s infinite" : "none", transition: "transform 0.2s ease-in-out" }} 
+                                alt="Download CV Icon"
+                            />
                         </button>
                     </div>
                 </div>
                 <div className="mb-6 pl-5 w-96" data-aos="fade-left">
-                    <form className="max-w-sm mx-auto pr-3 text-white" onSubmit={handleSubmit}>
-                        <label htmlFor="email" className="mt-5 block mb-2 text-base font-medium dark:text-white">Email</label>
+                    <form className="max-w-sm mx-auto pr-3 text-white" onSubmit={handleSubmit} itemScope itemType="http://schema.org/ContactPage">
+                        <label htmlFor="email" className="block mb-2 text-base font-medium dark:text-white">Email</label>
                         <div className="relative">
                             <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
                                 <svg className="w-4 h-4 text-[#3b83bd] dark:text-[#3b83bd]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
-                                    <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
+                                <   path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
                                     <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
                                 </svg>
                             </div>
@@ -143,9 +148,10 @@ const Contact = () => {
                                 name="email" 
                                 value={formData.email} 
                                 onChange={handleChange} 
-                                className="bg-gray-50 border border-gray-300text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                                className="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
                                 placeholder="name@gmail.com" 
                                 required 
+                                itemProp="email"
                             />
                         </div>
 
@@ -165,6 +171,7 @@ const Contact = () => {
                                 className="bg-gray-50 border border-blue-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
                                 placeholder="Mario Rossi" 
                                 required 
+                                itemProp="name"
                             />
                         </div>
 
@@ -184,6 +191,7 @@ const Contact = () => {
                                 className="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
                                 placeholder="Collaborazione" 
                                 required 
+                                itemProp="subject"
                             />
                         </div>
                         
@@ -197,6 +205,7 @@ const Contact = () => {
                             className="block p-2.5 w-full text-base bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
                             placeholder="Ciao Giorgio, vorrei collaborare con te..." 
                             required 
+                            itemProp="text"
                         ></textarea>
                         {status && <p className="mt-4 text-white">{status}</p>}
                         <button 

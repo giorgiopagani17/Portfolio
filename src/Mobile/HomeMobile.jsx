@@ -82,13 +82,13 @@ const Home = () => {
   };
   
   return (
-    <div id="home">
-        <div class="flex items-center justify-center custom-min-height gap-x-[10%] mt-[-2%]">
+    <div id="home" itemScope itemType="http://schema.org/Person">
+        <div class="flex items-center justify-center custom-min-height gap-x-[10%] mt-[-2%]" itemProp="mainContentOfPage">
           <Card color="transparent" shadow={false} className="slide-in-left">
             <CardBody className="mb-6 pl-5 text-white md:text-center">
-              <p><strong className="text-white text-5xl md:text-7xl lg:text-8xl">I'm Giorgio Pagani</strong></p>
-              <p className="mt-3 h-7"><strong id="text" className="text-[#3b83bd] text-3xl md:text-5xl lg:text-6xl">{typedText}</strong></p>
-              <p className="mt-10 text-base md:text-xl lg:text-2xl">Sono un full-stack developer specializzato <br/> in React e Python</p>
+              <h1><strong className="text-white text-5xl md:text-7xl lg:text-8xl">I'm Giorgio Pagani</strong></h1>
+              <h2 className="mt-3 h-7"><strong id="text" className="text-[#3b83bd] text-3xl md:text-5xl lg:text-6xl" itemProp="jobTitle">{typedText}</strong></h2>
+              <p className="mt-10 text-base md:text-xl lg:text-2xl">Sono un junior full-stack developer specializzato <br/> in React e Python</p>
               <div className="mt-10">
 
                 <FontAwesomeIcon 
@@ -98,7 +98,8 @@ const Home = () => {
                   style={{ color: hoveredIcon === 'instagram' ? "#3b83bd" : "#ffffff", marginRight:'5%', cursor:'pointer' }} 
                   onClick={() => handleClick("https://www.instagram.com/_giorgiopagani_/")} 
                   onMouseEnter={() => handleIconMouseEnter('instagram')} 
-                  onMouseLeave={handleIconMouseLeave} 
+                  onMouseLeave={handleIconMouseLeave}
+                  itemProp="sameAs"
                 />
                 <FontAwesomeIcon 
                   icon={faLinkedin} 
@@ -107,7 +108,8 @@ const Home = () => {
                   style={{ color: hoveredIcon === 'linkedin' ? "#3b83bd" : "#ffffff", marginRight:'5%', cursor:'pointer' }} 
                   onClick={() => handleClick("https://www.linkedin.com/in/giorgio-pagani-5ab4b42b1/")} 
                   onMouseEnter={() => handleIconMouseEnter('linkedin')} 
-                  onMouseLeave={handleIconMouseLeave} 
+                  onMouseLeave={handleIconMouseLeave}
+                  itemProp="sameAs"
                 />
                 <FontAwesomeIcon 
                   icon={faGithub} 
@@ -116,7 +118,8 @@ const Home = () => {
                   style={{ color: hoveredIcon === 'github' ? "#3b83bd" : "#ffffff", marginRight:'5%', cursor:'pointer' }} 
                   onClick={() => handleClick("https://github.com/giorgiopagani17")} 
                   onMouseEnter={() => handleIconMouseEnter('github')} 
-                  onMouseLeave={handleIconMouseLeave} 
+                  onMouseLeave={handleIconMouseLeave}
+                  itemProp="sameAs"
                 />
                 <FontAwesomeIcon 
                   icon={faEnvelope} 
@@ -125,7 +128,8 @@ const Home = () => {
                   style={{ color: hoveredIcon === 'email' ? "#3b83bd" : "#ffffff", cursor:'pointer' }} 
                   onClick={handleEmailClick} 
                   onMouseEnter={() => handleIconMouseEnter('email')} 
-                  onMouseLeave={handleIconMouseLeave} 
+                  onMouseLeave={handleIconMouseLeave}
+                  itemProp="sameAs"
                 />
               </div>
               <button id="button" className="text-white mt-10 bg-[#3b83bd] hover:bg-[#3b83bd] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"

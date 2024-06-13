@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Card } from "@material-tailwind/react";
 import "animate.css";
 import 'aos/dist/aos.css';
@@ -18,7 +18,7 @@ const About = () => {
         <img
           src={imageUrl}
           className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          alt="Overlay"
+          alt={`Image for ${title}`} // Alt aggiornato con interpolazione per descrizione dinamica
         />
       )}
       <div className="relative z-10 flex flex-col items-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
@@ -42,7 +42,7 @@ const About = () => {
   );
 
   return (
-    <div className="bg-white" id="about">
+    <div className="bg-white" id="about" itemScope itemType="http://schema.org/Person">
         <div className="w-full overflow-hidden">
             <svg
             id="svg"
@@ -63,11 +63,11 @@ const About = () => {
         </div>
         <div className="text-center text-[#3b83bd] text-6xl mb-8">
             <div className="relative flex flex-col justify-center items-center" data-aos="zoom-in-down">
-            <div className="absolute mb-10 text-[#3b83bd] opacity-25 blur-[3px] text-[125%] font-bold">
-                About Me
-            </div>
+             <div className="absolute mb-10 text-[#3b83bd] opacity-25 blur-[3px] text-[125%] font-bold">
+              <h1>About Me</h1>
+             </div>
             <div className="relative text-[#3b83bd] text-6xl font-bold">
-                About Me
+              <h1>About Me</h1>
             </div>
             </div>
         </div>
@@ -77,22 +77,25 @@ const About = () => {
                     <img
                         src="/fotocartoon.jpg"
                         className="w-96 rounded-full mr-5"
-                        alt="Giorgio Pagani"
+                        alt="Giorgio Pagani Portrait" // Alt aggiornato con descrizione statica
+                        itemProp="image"
                     />
                     <div className="ml-10 flex flex-col justify-center">
                         <div className="ml-5 mr-5 text-lg">
-                            <p className="text-xl">
-                                <p className="text-3xl mb-1">
-                                Ciao👋🏼<span className="ml-1"> Sono </span>
-                                <strong className="text-[#3b83bd]">Giorgio Pagani</strong>!
-                                </p>
-                                Un{" "}
-                                <strong className="text-[#3b83bd]">Full-Stack Developer</strong>
-                                👨🏻‍💻{" "}
-                                situato a <strong className="text-[#3b83bd]">Bergamo</strong>
-                                🌍
-                            </p>
-                            <p className="mt-2">
+                            <div className="text-xl">
+                                <h1 className="text-3xl mb-1">
+                                  Ciao👋🏼<span className="ml-1"> Sono </span>
+                                  <strong className="text-[#3b83bd]" itemProp="name">Giorgio Pagani</strong>!
+                                </h1>
+                                <h2 itemProp="description">
+                                  Un{" "}
+                                  <strong className="text-[#3b83bd]" itemProp="jobTitle">Full-Stack Developer</strong>
+                                  👨🏻‍💻{" "}
+                                  situato a <strong className="text-[#3b83bd]" itemProp="homeLocation">Bergamo</strong>
+                                  🌍
+                                </h2>
+                            </div>
+                            <p className="mt-2" itemProp="description">
                                 Sono un ragazzo creativo, ambizioso e determinato. Ho un <br /> diploma in Sistemi Informativi
                                 Aziendali e ottime capacità <br /> di lavorare in un team.
                             </p>

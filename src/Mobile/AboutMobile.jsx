@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Card } from "@material-tailwind/react";
 import "animate.css";
 import 'aos/dist/aos.css';
@@ -18,7 +18,7 @@ const About = () => {
         <img
           src={imageUrl}
           className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          alt="Overlay"
+          alt={`Image for ${title}`}
         />
       )}
       <div className="relative z-10 flex flex-col items-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
@@ -42,85 +42,93 @@ const About = () => {
   );
 
   return (
-    <div className="bg-white" id="about">
-        <div className="w-full overflow-hidden">
-            <svg
-            id="svg"
-            viewBox="0 0 1440 390"
-            xmlns="http://www.w3.org/2000/svg"
-            className="transition duration-300 ease-in-out delay-150 mt-[-15%]"
-            >
-            <path
-                d="M 0,400 L 0,150 C 110.17857142857142,170.92857142857144 220.35714285714283,191.85714285714286 343,171 C 465.64285714285717,150.14285714285714 600.7500000000001,87.50000000000001 726,89 C 851.2499999999999,90.49999999999999 966.6428571428571,156.14285714285714 1084,177 C 1201.357142857143,197.85714285714286 1320.6785714285716,173.92857142857144 1440,150 L 1440,400 L 0,400 Z"
-                stroke="none"
-                strokeWidth="0"
-                fill="#0A0436"
-                fillOpacity="1"
-                className="transition-all duration-300 ease-in-out delay-150 path-0"
-                transform="rotate(-180 720 200)"
-            ></path>
-            </svg>
-        </div>
-        <div className="text-center text-[#3b83bd] text-6xl mb-8 mt-5">
-            <div className="relative flex flex-col justify-center items-center" data-aos="zoom-in-down">
-            <div className="absolute mb-10 text-[#3b83bd] opacity-25 blur-[3px] text-7xl font-bold">
-                About Me
-            </div>
-            <div className="relative text-[#3b83bd] text-6xl font-bold">
-                About Me
-            </div>
-            </div>
-        </div>
-        <div className="flex justify-center items-center">
-            <div className="flex flex-col items-center" data-aos="fade-up">
-                    <img
-                        src="/fotocartoon.jpg"
-                        className="w-96 rounded-full"
-                        alt="Giorgio Pagani"
-                        style={{ transform: 'scale(0.97)', transformOrigin: 'top' }}
-                    />
-                    <div className="ml-5 mr-5 flex flex-col justify-center">
-                        <div className="ml-5 mr-5 text-lg" data-aos="fade-right">
-                            <p className="text-xl text-center mt-5">
-                                <p className="text-3xl mb-1">
-                                Ciao👋🏼
-                                <span className="ml-2 inline-block whitespace-nowrap"> Sono <strong className="text-[#3b83bd]">Giorgio Pagani</strong>!</span>
-                                </p>
-                                <span className="inline-block whitespace-nowrap">Un <strong className="text-[#3b83bd]">Full-Stack Developer👨🏻‍💻 </strong></span>
-                                <span className="inline-block whitespace-nowrap">situato a <strong className="text-[#3b83bd]">Bergamo 🌍</strong></span>
-                            </p>
-                            <p className="mt-2 text-center">
-                                Sono un ragazzo creativo, ambizioso e determinato. Ho un diploma in Sistemi Informativi
-                                Aziendali e ottime capacità di lavorare in un team.
-                            </p>
-                        </div>
-                        <hr className="mt-5 mb-5 h-1 bg-[#3b83bd]" data-aos="fade-up"/>
-                        <div className="flex flex-wrap justify-center gap-4 mb-10" data-aos="fade-left">
-                            <InfoCard
-                                imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcnZoKyWdFLJh6TNAlU4Y8QEAUVhISRa8J9g&s"
-                                title="Servizi Inf. Aziendali"
-                                description="Diploma"
-                                onClick={() =>
-                                handleOpen(
-                                    "https://islotto.edu.it/indirizzo-di-studio/ite-sistemi-informativi-aziendali-sia/"
-                                )
-                                }
-                            />
-                            <InfoCard
-                                imageUrl="https://www.eventi-digitali.online/media/public/38/Logo-JAC.jpg"
-                                title="Web Development"
-                                description="Diploma ITS"
-                                onClick={() =>
-                                handleOpen("https://jac-its.it/corso/web-development/")
-                                }
-                            />
-                            <CardNumber title="7+" description="Linguaggi di Programmazione" />
-                            <CardNumber title="3" description="Progetti Completati" />
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div className="bg-white" id="about" itemScope itemType="http://schema.org/Person">
+      <div className="w-full overflow-hidden">
+        <svg
+          id="svg"
+          viewBox="0 0 1440 390"
+          xmlns="http://www.w3.org/2000/svg"
+          className="transition duration-300 ease-in-out delay-150 mt-[-15%]"
+        >
+          <path
+            d="M 0,400 L 0,150 C 110.17857142857142,170.92857142857144 220.35714285714283,191.85714285714286 343,171 C 465.64285714285717,150.14285714285714 600.7500000000001,87.50000000000001 726,89 C 851.2499999999999,90.49999999999999 966.6428571428571,156.14285714285714 1084,177 C 1201.357142857143,197.85714285714286 1320.6785714285716,173.92857142857144 1440,150 L 1440,400 L 0,400 Z"
+            stroke="none"
+            strokeWidth="0"
+            fill="#0A0436"
+            fillOpacity="1"
+            className="transition-all duration-300 ease-in-out delay-150 path-0"
+            transform="rotate(-180 720 200)"
+          ></path>
+        </svg>
       </div>
+      <div className="text-center text-[#3b83bd] text-6xl mb-8 mt-5" >
+        <div className="relative flex flex-col justify-center items-center" data-aos="zoom-in-down">
+          <div className="absolute mb-10 text-[#3b83bd] opacity-25 blur-[3px] text-7xl font-bold">
+            <h1>About Me</h1>
+          </div>
+          <div className="relative text-[#3b83bd] text-6xl font-bold">
+            <h1>About Me</h1>
+          </div>
+        </div>
+      </div>
+      <div className="flex justify-center items-center">
+        <div className="flex flex-col items-center" data-aos="fade-up">
+          <img
+            src="/fotocartoon.jpg"
+            className="w-96 rounded-full"
+            alt="Giorgio Pagani Portrait"
+            style={{ transform: 'scale(0.97)', transformOrigin: 'top' }}
+            itemProp="image"
+          />
+          <div className="ml-5 mr-5 flex flex-col justify-center">
+            <div className="ml-5 mr-5 text-lg" data-aos="fade-right">
+              <div className="text-xl text-center mt-5">
+                <h1 className="text-3xl mb-1">
+                  Ciao👋🏼
+                  <span className="ml-2 inline-block whitespace-nowrap">
+                    Sono <strong className="text-[#3b83bd]" itemProp="name">Giorgio Pagani</strong>!
+                  </span>
+                </h1>
+                <h2>
+                  <span className="inline-block whitespace-nowrap">
+                    Un <strong className="text-[#3b83bd]" itemProp="jobTitle">Full-Stack Developer👨🏻‍💻 </strong>
+                  </span>
+                  <span className="inline-block whitespace-nowrap">
+                    situato a <strong className="text-[#3b83bd]" itemProp="homeLocation">Bergamo 🌍</strong>
+                  </span>
+                </h2>
+              </div>
+              <p className="mt-2 text-center" itemProp="description">
+                Sono un ragazzo creativo, ambizioso e determinato. Ho un diploma in Sistemi Informativi Aziendali e ottime capacità di lavorare in un team.
+              </p>
+            </div>
+            <hr className="mt-5 mb-5 h-1 bg-[#3b83bd]" data-aos="fade-up"/>
+            <div className="flex flex-wrap justify-center gap-4 mb-10" data-aos="fade-left">
+              <InfoCard
+                imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcnZoKyWdFLJh6TNAlU4Y8QEAUVhISRa8J9g&s"
+                title="Servizi Inf. Aziendali"
+                description="Diploma"
+                onClick={() =>
+                  handleOpen(
+                    "https://islotto.edu.it/indirizzo-di-studio/ite-sistemi-informativi-aziendali-sia/"
+                  )
+                }
+              />
+              <InfoCard
+                imageUrl="https://www.eventi-digitali.online/media/public/38/Logo-JAC.jpg"
+                title="Web Development"
+                description="Diploma ITS"
+                onClick={() =>
+                  handleOpen("https://jac-its.it/corso/web-development/")
+                }
+              />
+              <CardNumber title="7+" description="Linguaggi di Programmazione" />
+              <CardNumber title="3" description="Progetti Completati" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
