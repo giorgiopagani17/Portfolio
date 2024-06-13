@@ -26,7 +26,7 @@ const Slider = () => (
   >
     <SwiperSlide className='w-auto'>
       <Card
-        image="/fotoportfolio.png"
+        image="/fotoportfolio.webp"
         repository="https://github.com/giorgiopagani17/Portfolio"
         tech1="React"
         techimage1="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
@@ -40,7 +40,7 @@ const Slider = () => (
     </SwiperSlide>
     <SwiperSlide className='w-auto'>
       <Card
-        image="/fotoinstagram.png"
+        image="/fotoinstagram.webp"
         repository="https://github.com/giorgiopagani17/instagram-project-work-py"
         tech1="React"
         techimage1="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
@@ -54,7 +54,7 @@ const Slider = () => (
     </SwiperSlide>
     <SwiperSlide className='w-auto'>
       <Card
-        image="/fotoblackjack.png"
+        image="/fotoblackjack.webp"
         repository="https://github.com/giorgiopagani17/blackjack"
         tech1="Html"
         techimage1="https://cdn-icons-png.flaticon.com/512/732/732212.png"

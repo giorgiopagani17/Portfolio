@@ -46,7 +46,7 @@ const Skills = () => {
                   Tools
                 </strong>
               </div>
-              <Typography variant="h2" color="blue-gray" className="mb-2">
+              <Typography variant="h5" color="blue-gray" className="mb-2">
                 {message === "Language" && (
                   <div className="grid grid-cols-3 gap-5" data-aos="flip-right">
                     <SkillItem logoUrl="https://cdn-icons-png.flaticon.com/512/732/732212.png" name="Html" level="Advanced" />

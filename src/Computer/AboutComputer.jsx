@@ -75,7 +75,7 @@ const About = () => {
             <div className="flex flex-col items-center" data-aos="fade-up">
                 <div className="flex mb-10">
                     <img
-                        src="/fotocartoon.jpg"
+                        src="/fotocartoon.webp"
                         className="w-96 rounded-full mr-5"
                         alt="Giorgio Pagani Portrait" // Alt aggiornato con descrizione statica
                         itemProp="image"
