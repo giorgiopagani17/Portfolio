@@ -1,10 +1,8 @@
-import { useState } from "react";
-import "../Css/Contact.css"; 
+import { useEffect, useState } from "react";
+import "../Css/Contact.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faDownload, faPaperPlane, faSpinner } from '@fortawesome/free-solid-svg-icons';
-import emailjs from 'emailjs-com';
-import 'aos/dist/aos.css';
 
 const Contact = () => {
     const [hoveredIcon, setHoveredIcon] = useState(null);
@@ -18,6 +16,33 @@ const Contact = () => {
     });
     const [status, setStatus] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+
+    useEffect(() => {
+        // Caricamento asincrono di emailjs
+        const scriptEmailjs = document.createElement('script');
+        scriptEmailjs.src = 'https://cdn.jsdelivr.net/npm/emailjs-com@2.6.2/dist/email.min.js';
+        scriptEmailjs.async = true;
+        document.body.appendChild(scriptEmailjs);
+
+        // Caricamento asincrono di AOS (Animate On Scroll Library)
+        const linkAosCss = document.createElement('link');
+        linkAosCss.href = 'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css';
+        linkAosCss.rel = 'stylesheet';
+        linkAosCss.onload = () => {
+            // Inizializzazione di AOS dopo il caricamento del CSS
+            const scriptAos = document.createElement('script');
+            scriptAos.src = 'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js';
+            scriptAos.async = true;
+            document.body.appendChild(scriptAos);
+        };
+        document.head.appendChild(linkAosCss);
+
+        return () => {
+            // Pulizia quando il componente viene smontato
+            document.body.removeChild(scriptEmailjs);
+            document.head.removeChild(linkAosCss);
+        };
+    }, []);
 
     const handleIconMouseEnter = (iconName) => {
         setHoveredIcon(iconName);

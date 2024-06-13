@@ -19,7 +19,6 @@ const Portfolio = () => {
             <About />
             <Skills />
             <Projects />
-            <Contact />
         </div>
     );
 
