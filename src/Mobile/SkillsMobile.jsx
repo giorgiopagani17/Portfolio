@@ -55,7 +55,7 @@ const Skills = () => {
                         Tools
                     </strong>
                     </div>
-                    <Typography variant="h5" color="blue-gray" className="mb-2">
+                    <Typography variant="h2" color="blue-gray" className="mb-2">
                         {message === "Language" && (
                             <div className="grid grid-cols-3 gap-5" data-aos="flip-right">
                                 <SkillItem logoUrl="https://cdn-icons-png.flaticon.com/512/732/732212.png" name="Html" level="Advanced" />
@@ -127,7 +127,7 @@ const SkillItem = ({ logoUrl, name, level }) => (
       <div className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
         <img src={logoUrl} alt={`${name} Logo`} className="w-full h-full object-contain" />
       </div>
-      <p>{name}</p>
+      <p className="text-xl">{name}</p>
       <p className="text-sm text-[#3b83bd]">{level}</p>
     </div>
 );
