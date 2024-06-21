@@ -124,8 +124,8 @@ const Skills = () => {
 
 const SkillItem = ({ logoUrl, name, level }) => (
     <div className="flex flex-col items-center justify-center w-[110px] h-[110px] mx-auto">
-      <div className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3">
-        <img src={logoUrl} alt={`${name} Logo`} className="w-full h-full object-contain" />
+      <div className="w-16 h-16 bg-white rounded-full overflow-hidden shadow-md p-3" id="icon">
+        <img src={logoUrl} alt={`${name} Logo`} className="w-full h-full object-contain"/>
       </div>
       <p className="text-xl">{name}</p>
       <p className="text-sm text-[#3b83bd]">{level}</p>
