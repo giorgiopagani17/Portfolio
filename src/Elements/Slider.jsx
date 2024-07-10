@@ -26,7 +26,7 @@ const Slider = () => (
     <SwiperSlide className='w-auto'>
       <Card
         image="/fotoemailsender.webp"
-        repository="https://github.com/giorgiopagani17/instagram-project-work-py"
+        repository="https://github.com/giorgiopagani17/EmailSenderFromCsv"
         tech1="WordPress"
         techimage1="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/WordPress_blue_logo.svg/2048px-WordPress_blue_logo.svg.png"
         tech2="Python"
