@@ -106,7 +106,7 @@ const Skills = () => {
                     <strong className="text-4xl text-[#3b83bd] flex items-center">
                     <span>Tools</span>
                     <img 
-                        src="https://www.pngkey.com/png/full/12-121051_tools-tools-png.png" 
+                        src="https://cdn-icons-png.freepik.com/512/5107/5107993.png" 
                         width="35px" 
                         height="35px" 
                         className="inline-block ml-2"
