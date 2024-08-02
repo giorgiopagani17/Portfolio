@@ -38,7 +38,7 @@ const Slider = () => (
           <div>
             <p>
               Ho creato una web app (hostata su Linux) utilizzata per inviare email con le credenziali <span className="inline-block whitespace-nowrap">Wi-Fi</span> agli utenti presenti in un file CSV. Inoltre ho aggiunto al sito WordPress dell'azienda una 
-              <a href="https://www.be-tech.biz/wi-fi/" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" target="_blank"> pagina tutorial</a> per l'accesso alla rete.
+              <a href="https://www.be-tech.biz/wi-fi/" target="_blank" class="font-medium text-blue-600 dark:text-blue-500 hover:underline"> pagina tutorial</a> per l'accesso alla rete.
             </p>
           </div>
         }      
