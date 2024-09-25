@@ -122,7 +122,7 @@ const About = () => {
                 }
               />
               <CardNumber title="7+" description="Linguaggi di Programmazione" />
-              <CardNumber title="3" description="Progetti Completati" />
+              <CardNumber title="4" description="Progetti Completati" />
             </div>
           </div>
         </div>
