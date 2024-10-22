@@ -49,15 +49,15 @@ const Skills = () => {
               <Typography variant="h2" color="blue-gray" className="font-xl mb-2">
                 {message === "Language" && (
                   <div className="grid grid-cols-3 gap-5" data-aos="flip-right">
-                    <SkillItem logoUrl="https://cdn-icons-png.flaticon.com/512/732/732212.png" name="Html" level="Advanced" />
-                    <SkillItem logoUrl="https://static-00.iconduck.com/assets.00/file-type-css-icon-1806x2048-r5fwjl3p.png" name="Css" level="Intermediate" />
                     <SkillItem logoUrl="https://static-00.iconduck.com/assets.00/javascript-js-icon-2048x2048-nyxvtvk0.png" name="JavaScript" level="Advanced" />
-                    <SkillItem logoUrl="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png" name="Node.js" level="Intermediate" />
                     <SkillItem logoUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" name="React" level="Intermediate" />
+                    <SkillItem logoUrl="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png" name="Vue" level="Intermediate" />
+                    <SkillItem logoUrl="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png" name="Node.js" level="Intermediate" />
+                    <SkillItem logoUrl="https://upload.wikimedia.org/wikipedia/commons/a/a8/NestJS.svg" name="Nest" level="Intermediate" />
                     <SkillItem logoUrl="https://cdn.freebiesupply.com/logos/large/2x/python-5-logo-png-transparent.png" name="Python" level="Intermediate" />
                     <SkillItem logoUrl="https://cdn.runalloy.com/landing/uploads-new/mysql_PNG_23_06dd9edb0c.png" name="MySql" level="Advanced" />
                     <SkillItem logoUrl="https://cdn-icons-png.flaticon.com/512/5968/5968332.png" name="Php" level="Intermediate" />
-                    <SkillItem logoUrl="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png" name="Java" level="Base" />
+                    <SkillItem logoUrl="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png" name="Java" level="Intermediate" />
                   </div>
                 )}
 
@@ -66,13 +66,13 @@ const Skills = () => {
                     <SkillItem logoUrl="https://cdn-icons-png.flaticon.com/512/25/25231.png" name="GitHub" level="Intermediate" />
                     <SkillItem logoUrl="https://www.netcost-security.fr/wp-content/uploads/2022/10/Visual-Studio-Code-est-un-editeur-de-code-solide-pour.png" name="VS Code" level="Advanced" />
                     <SkillItem logoUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/2048px-IntelliJ_IDEA_Icon.svg.png" name="IntellIJ" level="Intermediate" />
-                    <SkillItem logoUrl="https://cdn.icon-icons.com/icons2/1381/PNG/512/xampp_94513.png" name="Xampp" level="Intermediate" />
+                    <SkillItem logoUrl="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" name="Git" level="Intermediate" />
                     <SkillItem logoUrl="https://www.geekandjob.com/uploads/wiki/c620b14fbbc044bda55703f69c04b565.png" name="Mamp" level="Intermediate" />
                     <SkillItem logoUrl="https://cdn.iconscout.com/icon/free/png-256/free-postman-3521648-2945092.png?f=webp" name="PostMan" level="Advanced" />
-                    <SkillItem logoUrl="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" name="Git" level="Intermediate" />
                     <SkillItem logoUrl="https://iconape.com/wp-content/png_logo_vector/bootstrap-framework-logo.png" name="Bootstrap" level="Intermediate" />
                     <SkillItem logoUrl="https://static-00.iconduck.com/assets.00/tailwind-css-icon-2048x1229-u8dzt4uh.png" name="Tailwind" level="Intermediate" />
-                  </div>
+                    <SkillItem logoUrl="https://cdn.quasar.dev/logo-v2/512/logo.png" name="Quasar" level="Intermediate" />
+                </div>
                 )}
               </Typography>
             </CardBody>
