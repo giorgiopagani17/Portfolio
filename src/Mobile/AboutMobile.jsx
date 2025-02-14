@@ -74,7 +74,7 @@ const About = () => {
         <div className="flex flex-col items-center" data-aos="fade-up">
           <img
             src="/fotocartoon.webp"
-            className="w-96 rounded-full"
+            className="w-96"
             alt="Giorgio Pagani Portrait"
             style={{ transform: 'scale(0.97)', transformOrigin: 'top' }}
             itemProp="image"

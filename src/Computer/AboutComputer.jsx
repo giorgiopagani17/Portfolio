@@ -75,7 +75,7 @@ const About = () => {
                 <div className="flex mb-10">
                     <img
                         src="/fotocartoon.webp"
-                        className="w-96 rounded-full mr-5"
+                        className="w-96 mr-5"
                         alt="Giorgio Pagani Portrait" // Alt aggiornato con descrizione statica
                         itemProp="image"
                     />
