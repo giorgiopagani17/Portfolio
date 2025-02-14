@@ -61,10 +61,10 @@ const Skills = () => {
                                 <SkillItem logoUrl="https://static-00.iconduck.com/assets.00/javascript-js-icon-2048x2048-nyxvtvk0.png" name="JavaScript" level="Advanced" />
                                 <SkillItem logoUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" name="React" level="Intermediate" />
                                 <SkillItem logoUrl="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png" name="Vue" level="Intermediate" />
+                                <SkillItem logoUrl="https://images.seeklogo.com/logo-png/50/2/angular-icon-logo-png_seeklogo-507324.png" name="Angular" level="Intermediate" />
                                 <SkillItem logoUrl="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png" name="Node.js" level="Intermediate" />
                                 <SkillItem logoUrl="https://upload.wikimedia.org/wikipedia/commons/a/a8/NestJS.svg" name="Nest" level="Intermediate" />
                                 <SkillItem logoUrl="https://cdn.freebiesupply.com/logos/large/2x/python-5-logo-png-transparent.png" name="Python" level="Intermediate" />
-                                <SkillItem logoUrl="https://cdn.runalloy.com/landing/uploads-new/mysql_PNG_23_06dd9edb0c.png" name="MySql" level="Advanced" />
                                 <SkillItem logoUrl="https://cdn-icons-png.flaticon.com/512/5968/5968332.png" name="Php" level="Intermediate" />
                                 <SkillItem logoUrl="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png" name="Java" level="Intermediate" />
                             </div>
