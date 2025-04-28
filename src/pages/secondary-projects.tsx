@@ -34,7 +34,7 @@ const projectItems = [
         image: PortfolioImage,
         title: "Portfolio",
         description: "Personal portfolio developed with React and TypeScript, featuring animated UI components and responsive design. Designed to showcase my projects and skills in an interactive way.",
-        codeUrl: "https://github.com/yourusername/project1",
+        codeUrl: "https://github.com/giorgiopagani17/Portfolio",
         languages: [
           {name: "React", icon: <SiReact className="inline" />},
           {name: "Next.js", icon: <SiNextdotjs className="inline" />},

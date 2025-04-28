@@ -149,7 +149,7 @@ export default function Skills() {
 
     // Calculate total path length
     const { width, height } = dimensions;
-    const totalLength = (2 * (width + height - 2 * cornerRadius) + 2 * Math.PI * cornerRadius) - (activeIcons.length * 48);
+    const totalLength = (2 * (width + height - 2 * cornerRadius) + 2 * Math.PI * cornerRadius) - ((activeIcons.length - 1.35) * 48);
 
     // Animation loop using requestAnimationFrame
     const animate = () => {
@@ -406,7 +406,9 @@ export default function Skills() {
 
               {/* Tooltip */}
               {hoveredIcon === index && activeIcons[index] && (
-                <div className="fixed pointer-events-none z-50" style={{left: pos.x - 100 }}>
+                  <div className="fixed pointer-events-none z-50" style={{
+                    left: isMobile ? pos.x - 85 : pos.x - 100,
+                  }}>
                   <motion.div
                     initial={{ opacity: 0, y: 10, scale: 0.9 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
