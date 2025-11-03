@@ -63,7 +63,7 @@ export default function AboutMe() {
                     area="md:[grid-area:1/7/2/13] xl:[grid-area:1/5/2/9]"
                     icon={<User className="h-4 w-4 text-neutral-400" />}
                     title="About Me"
-                    description="I'm Giorgio Pagani! A Full-Stack Developer based in Bergamo. I'm a determined person with excellent teamwork skills."
+                    description="I'm Giorgio Pagani! A Front-End Developer based in Bergamo. I'm a determined person with excellent teamwork skills."
                 />
 
                 <GridItem
@@ -77,7 +77,7 @@ export default function AboutMe() {
                     area="md:[grid-area:2/7/3/13] xl:[grid-area:2/1/3/7]"
                     icon={<Code className="h-4 w-4 text-neutral-400" />}
                     title="Programming Languages"
-                    description="I master over 7 programming languages, including JavaScript, TypeScript, React, and other essential tools for modern web development."
+                    description="I master over 7 programming languages, including Vue, TypeScript, React, and other essential tools for modern web development."
                 />
 
                 <GridItem
