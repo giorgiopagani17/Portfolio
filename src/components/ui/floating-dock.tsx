@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { IconBrandGithub, IconBrandLinkedin, IconMailFilled, IconClipboardFilled, IconMenu2 } from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandLinkedin, IconMailFilled, IconMenu2 } from "@tabler/icons-react";
 
 export const FloatingDock = ({
    className,
