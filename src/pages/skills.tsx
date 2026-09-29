@@ -89,8 +89,8 @@ export default function Skills() {
     { icon: SiPostman, color: "#FF6C37", name: "Postman", description: "Intermediate", category: "tools" },
     { icon: VscVscode, color: "#007ACC", name: "VS Code", description: "Advanced", category: "tools" },
     { icon: SiJetbrains, color: "#ffffff", name: "JetBrains", description: "Intermediate", category: "tools" },
-    { icon: SiWordpress, color: "#21759B", name: "WordPress", description: "Beginner", category: "tools" },
-    { icon: SiElementor, color: "#F24E1E", name: "Elementor", description: "Beginner", category: "tools" },
+    { icon: SiWordpress, color: "#21759B", name: "WordPress", description: "Advanced", category: "tools" },
+    { icon: SiElementor, color: "#F24E1E", name: "Elementor", description: "Advanced", category: "tools" },
   ];
 
   // Path dimensions and configuration
