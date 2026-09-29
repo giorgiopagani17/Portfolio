@@ -23,8 +23,13 @@ import {
   SiMysql,
   SiDotnet,
   SiCanva,
+  SiFigma,
   SiPostman,
-  SiJetbrains
+  SiGoland,
+  SiJetbrains,
+  SiWordpress,
+  SiElementor,
+  SiFlutter
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { FaJava } from "react-icons/fa";
@@ -51,7 +56,7 @@ export default function Skills() {
   const [isMobile, setIsMobile] = useState(false);
 
   const allIcons: IconInfo[] = [
-    // Frontend
+    // Frontend & Mobile
     { icon: SiTypescript, color: "#3178C6", name: "TypeScript", description: "Advanced", category: "frontend" },
     { icon: SiReact, color: "#61DAFB", name: "React", description: "Intermediate", category: "frontend" },
     { icon: SiNextdotjs, color: "#ffffff", name: "Next.js", description: "Intermediate", category: "frontend" },
@@ -60,6 +65,8 @@ export default function Skills() {
     { icon: SiTailwindcss, color: "#06B6D4", name: "Tailwind CSS", description: "Intermediate", category: "frontend" },
     { icon: SiBootstrap, color: "#7952B3", name: "Bootstrap", description: "Intermediate", category: "frontend" },
     { icon: SiQuasar, color: "#1976D2", name: "Quasar", description: "Advanced", category: "frontend" },
+    { icon: SiReact, color: "#61DAFB", name: "React Native", description: "Intermediate", category: "frontend" },
+    { icon: SiFlutter, color: "#02569B", name: "Flutter", description: "Beginner", category: "frontend" },
 
     // Backend
     { icon: FaJava, color: "#007396", name: "Java", description: "Beginner", category: "backend" },
@@ -70,16 +77,20 @@ export default function Skills() {
     { icon: SiNodedotjs, color: "#339933", name: "Node.js", description: "Intermediate", category: "backend" },
     { icon: SiMysql, color: "#4479A1", name: "MySQL", description: "Advanced", category: "backend" },
     { icon: SiDotnet, color: "#239120", name: "C#", description: "Beginner", category: "backend" },
+    { icon: SiGoland, color: "#00ADD8", name: "Go", description: "Beginner", category: "backend" },
 
     // Tools & General
-    { icon: SiGit, color: "#F05032", name: "Git", description: "Intermediate", category: "tools" },
-    { icon: SiGithub, color: "#ffffff", name: "GitHub", description: "Intermediate", category: "tools" },
+    { icon: SiGit, color: "#F05032", name: "Git", description: "Advanced", category: "tools" },
+    { icon: SiGithub, color: "#ffffff", name: "GitHub", description: "Advanced", category: "tools" },
     { icon: SiCanva, color: "#00C4CC", name: "Canva", description: "Intermediate", category: "tools" },
-    { icon: SiNpm, color: "#CB3837", name: "NPM", description: "Intermediate", category: "tools" },
-    { icon: SiDocker, color: "#2496ED", name: "Docker", description: "Beginner", category: "tools" },
+    { icon: SiFigma, color: "#F24E1E", name: "Figma", description: "Intermediate", category: "tools" },
+    { icon: SiNpm, color: "#CB3837", name: "NPM", description: "Advanced", category: "tools" },
+    { icon: SiDocker, color: "#2496ED", name: "Docker", description: "Intermediate", category: "tools" },
     { icon: SiPostman, color: "#FF6C37", name: "Postman", description: "Intermediate", category: "tools" },
-    { icon: VscVscode, color: "#007ACC", name: "VS Code", description: "Intermediate", category: "tools" },
+    { icon: VscVscode, color: "#007ACC", name: "VS Code", description: "Advanced", category: "tools" },
     { icon: SiJetbrains, color: "#ffffff", name: "JetBrains", description: "Intermediate", category: "tools" },
+    { icon: SiWordpress, color: "#21759B", name: "WordPress", description: "Beginner", category: "tools" },
+    { icon: SiElementor, color: "#F24E1E", name: "Elementor", description: "Beginner", category: "tools" },
   ];
 
   // Path dimensions and configuration
@@ -288,6 +299,16 @@ export default function Skills() {
       {/* Category tabs */}
       <div className="absolute top-0 left-0 right-0 flex justify-center gap-2 px-4 flex-wrap">
         <button
+            onClick={() => handleCategoryChange("tools")}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer ${
+                activeCategory === "tools"
+                    ? "bg-purple-500 text-white shadow-md"
+                    : "bg-neutral-800/70 text-neutral-300 hover:bg-neutral-700"
+            }`}
+        >
+          Tools
+        </button>
+        <button
             onClick={() => handleCategoryChange("frontend")}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer ${
                 activeCategory === "frontend"
@@ -295,7 +316,7 @@ export default function Skills() {
                     : "bg-neutral-800/70 text-neutral-300 hover:bg-neutral-700"
             }`}
         >
-          Frontend
+          Frontend & Mobile
         </button>
         <button
             onClick={() => handleCategoryChange("backend")}
@@ -306,16 +327,6 @@ export default function Skills() {
             }`}
         >
           Backend
-        </button>
-        <button
-            onClick={() => handleCategoryChange("tools")}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer ${
-                activeCategory === "tools"
-                    ? "bg-purple-500 text-white shadow-md"
-                    : "bg-neutral-800/70 text-neutral-300 hover:bg-neutral-700"
-            }`}
-        >
-          Tools
         </button>
       </div>
 
@@ -347,18 +358,18 @@ export default function Skills() {
                           : "bg-gradient-to-r from-purple-500 to-purple-700"
               }`}>
                 {activeCategory === "frontend"
-                  ? "Frontend Development"
+                  ? "Frontend & Mobile"
                   : activeCategory === "backend"
-                    ? "Backend Development"
+                    ? "Backend"
                     : "Tools & Skills"
                 }
               </h3>
               <p className="text-sm md:text-lg mt-2 w-full text-neutral-400 max-w-lg">
                 {activeCategory === "frontend"
-                  ? "Experience with modern frontend frameworks and responsive design"
+                  ? "Experience with modern frontend frameworks, responsive design, and mobile application development."
                   : activeCategory === "backend"
-                    ? "Building scalable server-side applications and APIs"
-                    : "Development tools and supporting technologies"
+                    ? "Building scalable server-side applications and APIs, with a focus on performance, reliability, and maintainability."
+                    : "Development tools, supporting technologies, and graphic design tools for building and refining digital products."
                 }
               </p>
             </motion.div>

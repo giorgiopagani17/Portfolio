@@ -48,13 +48,6 @@ export const FloatingDock = ({
       href: "mailto:giorgio.pagani2003@gmail.com?subject=Ti%20contatto%20dal%20tuo%20sito%20portfolio&body=Ciao%20Giorgio,%20ti%20contatto%20per%20...",
       isDownload: false,
     },
-    {
-      title: "Curriculum Vitae",
-      tooltip: "Download my CV",
-      icon: <IconClipboardFilled className="w-full h-full" />,
-      href: "/cv-giorgio-pagani.pdf",
-      isDownload: true,
-    },
   ];
 
   if (isMobile) {

@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
-import {SiGithub} from "react-icons/si";
+import {FaEye} from "react-icons/fa";
 import Image, { StaticImageData } from "next/image";
 
 export const InfiniteMovingCards = ({
@@ -137,8 +137,8 @@ items: {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-md hover:from-blue-700 hover:to-purple-700 transition-colors w-full text-center"
                 >
-                  View the code
-                  <SiGithub className="ml-2" />
+                  <FaEye className="mr-2" />
+                  View Project
                 </a>
               </div>
             </div>

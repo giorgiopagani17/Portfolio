@@ -3,19 +3,14 @@
 import React from "react";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import {
-  SiReact,
-  SiNextdotjs,
-  SiTypescript,
-  SiJavascript,
-  SiHtml5,
-  SiCss3,
-  SiNodedotjs,
-  SiLinux,
-  SiWordpress
+  SiWordpress,
+  SiElementor,
+  SiFigma,
+  SiCanva,
 } from "react-icons/si";
-import PortfolioImage from "@/assets/secondary-project/portfolio.png";
-import EmailSenderImage from "@/assets/secondary-project/emailsender.png";
-import BlackJackImage from "@/assets/secondary-project/blackjack.png";
+import MarioLanzaSocietyImage from "@/assets/secondary-project/mariolanzasociety.png";
+import ArredamentoSeriateImage from "@/assets/secondary-project/arredamentoseriate.png";
+import FCCItaliaImage from "@/assets/secondary-project/fccitalia.png";
 
 export default function SecondaryProjects() {
     return (
@@ -31,36 +26,36 @@ export default function SecondaryProjects() {
 
 const projectItems = [
     {
-        image: PortfolioImage,
-        title: "Portfolio",
-        description: "Personal portfolio developed with React and TypeScript, featuring animated UI components and responsive design. Designed to showcase my projects and skills in an interactive way.",
-        codeUrl: "https://github.com/giorgiopagani17/Portfolio",
+        image: MarioLanzaSocietyImage,
+        title: "Mario Lanza Society",
+        description: "Landing page developed for the Mario Lanza Society, featuring a modern and responsive design focused on presenting the society, its activities, and its connection to Mario Lanza.",
+        codeUrl: "https://mariolanzasociety.com/",
         languages: [
-          {name: "React", icon: <SiReact className="inline" />},
-          {name: "Next.js", icon: <SiNextdotjs className="inline" />},
-          {name: "TypeScript", icon: <SiTypescript className="inline" />}
+          {name: "WordPress", icon: <SiWordpress className="inline" />},
+          {name: "Elementor", icon: <SiElementor className="inline" />},
+          {name: "Figma", icon: <SiFigma className="inline" />}
         ]
     },
     {
-        image: EmailSenderImage,
-        title: "Email Sender From CSV",
-        description: "Linux-hosted web application that automatically sends WiFi credentials via email to users listed in a CSV file. I also implemented a tutorial page on the company's WordPress site to guide network access.",
-        codeUrl: "https://github.com/giorgiopagani17/EmailSenderFromCsv",
+        image: ArredamentoSeriateImage,
+        title: "Arredamento Seriate",
+        description: "Landing page developed for a furniture and interior design business in Seriate, featuring a modern and responsive design to showcase its products, services, and design solutions.",
+        codeUrl: "https://www.arredamentoseriate.com/",
         languages: [
-          {name: "Node.js", icon: <SiNodedotjs className="inline" />},
-          {name: "Linux", icon: <SiLinux className="inline" />},
-          {name: "WordPress", icon: <SiWordpress className="inline" />}
+          {name: "WordPress", icon: <SiWordpress className="inline" />},
+          {name: "Elementor", icon: <SiElementor className="inline" />},
+          {name: "Figma", icon: <SiFigma className="inline" />}
         ]
     },
     {
-        image: BlackJackImage,
-        title: "Blackjack",
-        description: "Recreation of the Blackjack game developed with HTML, CSS, and JavaScript. The dealer follows the official game rules, providing an authentic experience without real betting, created for entertainment purposes only.",
-        codeUrl: "https://github.com/giorgiopagani17/blackjack",
+        image: FCCItaliaImage,
+        title: "FCC Italia",
+        description: "Corporate landing page developed for FCC Italia, featuring a modern and responsive design to present the company, its services, and key areas of expertise.",
+        codeUrl: "https://www.fccitalia.it/",
         languages: [
-          {name: "HTML", icon: <SiHtml5 className="inline" />},
-          {name: "CSS", icon: <SiCss3 className="inline" />},
-          {name: "JavaScript", icon: <SiJavascript className="inline" />}
+          {name: "WordPress", icon: <SiWordpress className="inline" />},
+          {name: "Elementor", icon: <SiElementor className="inline" />},
+          {name: "Canva", icon: <SiCanva className="inline" />}
         ]
     },
 ];

@@ -63,7 +63,7 @@ export default function AboutMe() {
                     area="md:[grid-area:1/7/2/13] xl:[grid-area:1/5/2/9]"
                     icon={<User className="h-4 w-4 text-neutral-400" />}
                     title="About Me"
-                    description="I'm Giorgio Pagani! A Front-End Developer based in Bergamo. I'm a determined person with excellent teamwork skills."
+                    description="I'm Giorgio Pagani! A Front-End & Mobile Developer based in Bergamo. I'm a determined person with excellent teamwork skills."
                 />
 
                 <GridItem
@@ -83,8 +83,8 @@ export default function AboutMe() {
                 <GridItem
                     area="md:[grid-area:3/1/4/13] xl:[grid-area:2/7/3/13]"
                     icon={<Briefcase className="h-4 w-4 text-neutral-400" />}
-                    title="Completed Projects"
-                    description="I have successfully completed 3 major projects, demonstrating my technical skills and ability to achieve complex goals. Scroll down to see them!"
+                    title="Completed Projects & Libraries"
+                    description="I have successfully completed 3 major projects and managed 2 NPM libraries, demonstrating my technical skills and ability to achieve complex goals. Scroll down to see them!"
                 />
             </ul>
         </>
