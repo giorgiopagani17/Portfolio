@@ -5,13 +5,16 @@ import {
     motion,
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import { SiGithub } from "react-icons/si";
+import { SiGithub, SiNpm } from "react-icons/si";
 import { FaEye } from "react-icons/fa";
+import { IoDocumentTextOutline } from "react-icons/io5";
 
 interface TimelineEntry {
     title: string;
     codeUrl?: string;
     demoUrl?: string;
+    npmUrl?: string;
+    docsUrl?: string;
     content: React.ReactNode;
 }
 
@@ -74,6 +77,30 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                                         >
                                             <FaEye className="mr-2" />
                                             Live Demo
+                                        </a>
+                                    )}
+
+                                    {item.npmUrl && (
+                                        <a
+                                            href={item.npmUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-md hover:from-blue-700 hover:to-purple-700 transition-colors"
+                                        >
+                                            <SiNpm className="mr-2" />
+                                            NPM
+                                        </a>
+                                    )}
+
+                                    {item.docsUrl && (
+                                        <a
+                                            href={item.docsUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-md hover:from-blue-700 hover:to-purple-700 transition-colors"
+                                        >
+                                            <IoDocumentTextOutline className="mr-2" />
+                                            Docs
                                         </a>
                                     )}
                                 </div>

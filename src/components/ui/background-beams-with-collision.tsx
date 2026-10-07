@@ -80,7 +80,7 @@ export const BackgroundBeamsWithCollision = ({
                   key={`beam-${idx}-${beam.initialX}`}
                   beamOptions={{
                     ...beam,
-                    translateY: 5200
+                    translateY: 6000
                   }}
                   containerRef={containerRef}
                   parentRef={parentRef}
