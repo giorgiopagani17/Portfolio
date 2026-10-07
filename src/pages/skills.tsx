@@ -152,34 +152,58 @@ export default function Skills() {
   useEffect(() => {
     if (activeIcons.length === 0) return;
 
-    // Reset positions when category changes
+    const { width, height } = dimensions;
+
+    // This MUST be the same path length used by getPositionOnPath()
+    const topLength = width - 2 * cornerRadius;
+    const rightLength = height - 2 * cornerRadius;
+    const bottomLength = width - 2 * cornerRadius;
+    const leftLength = height - 2 * cornerRadius;
+
+    const cornerArcLength = Math.PI * cornerRadius / 2;
+
+    const totalLength =
+      topLength +
+      rightLength +
+      bottomLength +
+      leftLength +
+      4 * cornerArcLength;
+
+    // Reset animation when changing category
     if (activeIcons.length !== positions.length) {
       progressRef.current = 0;
-      setPositions(Array(activeIcons.length).fill({ x: 0, y: 0 }));
+
+      setPositions(
+        Array.from(
+          { length: activeIcons.length },
+          () => ({ x: 0, y: 0 })
+        )
+      );
     }
 
-    // Calculate total path length
-    const { width, height } = dimensions;
-    const totalLength = (2 * (width + height - 2 * cornerRadius) + 2 * Math.PI * cornerRadius) - ((activeIcons.length - 1.35) * 48);
-
-    // Animation loop using requestAnimationFrame
     const animate = () => {
       if (hoveredIcon === null) {
-        progressRef.current = (progressRef.current + speed) % totalLength;
+        progressRef.current =
+          (progressRef.current + speed) % totalLength;
       }
 
-      const newPositions = [];
-      // Distribute icons evenly around the path
       const iconSpacing = totalLength / activeIcons.length;
 
-      for (let i = 0; i < activeIcons.length; i++) {
-        // Calculate position with even spacing
-        const position = (i * iconSpacing + progressRef.current) % totalLength;
-        const iconPosition = getPositionOnPath(position, width, height, cornerRadius);
-        newPositions.push(iconPosition);
-      }
+      const newPositions = activeIcons.map((_, index) => {
+        const position =
+          (progressRef.current + index * iconSpacing) %
+          totalLength;
+
+        return getPositionOnPath(
+          position,
+          width,
+          height,
+          cornerRadius
+        );
+      });
 
       setPositions(newPositions);
+
       animationRef.current = requestAnimationFrame(animate);
     };
 
