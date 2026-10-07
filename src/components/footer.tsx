@@ -32,7 +32,7 @@ export const Footer = () => {
                 hover:text-white
               "
             >
-              Cookie Policy
+              Cookie Settings
             </button>
           </div>
 
