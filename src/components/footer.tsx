@@ -4,14 +4,36 @@ import React from "react";
 import { IconBrandGithub, IconBrandLinkedin, IconMailFilled } from "@tabler/icons-react";
 
 export const Footer = () => {
+  const openCookieSettings = () => {
+    window.dispatchEvent(new Event("open-cookie-settings"));
+  };
+
   return (
     <footer className="w-full py-8 bg-gradient-to-br backdrop-blur-sm border-t border-neutral-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-6 md:mb-0">
+          <div className="mb-5 md:mb-0">
             <p className="text-neutral-300 text-sm">
               © {new Date().getFullYear()} Giorgio Pagani. All rights reserved.
             </p>
+          </div>
+
+          <div className="mb-7 md:mb-0">
+            <button
+              type="button"
+              onClick={() => openCookieSettings()}
+              className="
+                text-sm
+                font-medium
+                text-white/80
+                underline
+                underline-offset-4
+                transition-colors
+                hover:text-white
+              "
+            >
+              Cookie Policy
+            </button>
           </div>
 
           <div className="flex space-x-6">
