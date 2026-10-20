@@ -26,7 +26,7 @@ function HomePage() {
                 {/* Sezione AboutMe */}
                 <section className="w-full mt-20">
                     <SectionHeader title="About Me" />
-                    <div className="px-15 lg:px-30">
+                    <div className="px-5 sm:px-10 md:px-15 lg:px-30">
                         <AboutMe />
                     </div>
                 </section>
