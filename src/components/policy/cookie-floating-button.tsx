@@ -9,7 +9,7 @@ export default function CookieSettingsButton() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-[9998]">
+    <div className="fixed bottom-6 right-6 z-[1000]">
       <motion.button
         type="button"
         aria-label="Cookie Settings"

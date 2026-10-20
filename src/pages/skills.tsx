@@ -753,7 +753,7 @@ export default function Skills() {
         <AnimatePresence>
           {positions.map((pos, index) => {
             const skill = activeIcons[index];
-            
+
             if (!skill) return null;
 
             const iconKey = `${activeCategory}-${skill.name}`;
@@ -837,7 +837,7 @@ export default function Skills() {
                       TOOLTIP_MARGIN * 2
                   : TOOLTIP_WIDTH_DESKTOP
               ),
-              zIndex: 999999,
+              zIndex: 100,
             }}
           >
             <motion.div

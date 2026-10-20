@@ -58,12 +58,12 @@ export const FloatingDock = ({
 
   if (isMobile) {
     return (
-      <div className={cn("fixed bottom-6 left-6 z-20", className, mobileClassName)}>
+      <div className={cn("fixed bottom-6 left-6 z-[999]", className, mobileClassName)}>
         <motion.div
           initial={{ scale: 1 }}
           animate={{ scale: isExpanded ? 1.2 : 1 }}
           onClick={() => setIsExpanded(!isExpanded)}
-          className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 flex items-center justify-center cursor-pointer shadow-lg z-30 transition-colors"
+          className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 flex items-center justify-center cursor-pointer shadow-lg z-[1000] transition-colors"
         >
           <div className="w-6 h-6 text-white">
             <IconMenu2 className="w-full h-full" />
@@ -92,7 +92,7 @@ export const FloatingDock = ({
   }
 
   return (
-    <div className={cn("fixed bottom-6 left-6 flex flex-col gap-4 z-20", className)}>
+    <div className={cn("fixed bottom-6 left-6 flex flex-col gap-4 z-[999]", className)}>
       {socialIcons.map((social) => (
         <SocialIcon key={social.title} {...social} />
       ))}
