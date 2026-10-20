@@ -90,7 +90,7 @@ export default function Skills() {
   const progressRef = useRef(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const pathRef = useRef<HTMLDivElement>(null);
-  const iconRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const iconRefs = useRef<Map<string, HTMLDivElement>>(new Map());
 
   const allIcons: IconInfo[] = [
     // Frontend & Mobile
@@ -324,8 +324,7 @@ export default function Skills() {
 
   // Calcola posizione del popup e della freccia.
   const updateTooltipPosition = useCallback(
-    (index: number) => {
-      const element = iconRefs.current[index];
+    (element: HTMLElement | null) => {
       if (!element) return;
 
       const rect = element.getBoundingClientRect();
@@ -386,6 +385,15 @@ export default function Skills() {
       });
     },
     [isMobile]
+  );
+
+  const getIconElement = useCallback(
+    (index: number) => {
+      const skill = activeIcons[index];
+      if (!skill) return null;
+      return iconRefs.current.get(`${activeCategory}-${skill.name}`) ?? null;
+    },
+    [activeIcons, activeCategory]
   );
 
   // Gestione delle dimensioni responsive.
@@ -508,13 +516,9 @@ export default function Skills() {
   useEffect(() => {
     if (hoveredIcon === null) return;
 
-    const closeOnScroll = () => {
-      setHoveredIcon(null);
-    };
-
-    const repositionOnResize = () => {
-      updateTooltipPosition(hoveredIcon);
-    };
+    const closeOnScroll = () => setHoveredIcon(null);
+    const repositionOnResize = () =>
+      updateTooltipPosition(getIconElement(hoveredIcon));
 
     window.addEventListener("scroll", closeOnScroll, true);
     window.addEventListener("resize", repositionOnResize);
@@ -523,19 +527,12 @@ export default function Skills() {
       window.removeEventListener("scroll", closeOnScroll, true);
       window.removeEventListener("resize", repositionOnResize);
     };
-  }, [hoveredIcon, updateTooltipPosition]);
+  }, [hoveredIcon, updateTooltipPosition, getIconElement]);
 
-  // Ricalcola la posizione quando cambiano dimensioni o viewport.
   useEffect(() => {
     if (hoveredIcon === null) return;
-
-    updateTooltipPosition(hoveredIcon);
-  }, [
-    hoveredIcon,
-    isMobile,
-    dimensions,
-    updateTooltipPosition,
-  ]);
+    updateTooltipPosition(getIconElement(hoveredIcon));
+  }, [hoveredIcon, isMobile, dimensions, updateTooltipPosition, getIconElement]);
 
   function getPositionOnPath(
     step: number,
@@ -641,9 +638,12 @@ export default function Skills() {
     return { x: x + padding, y: y + padding };
   }
 
-  const handleMouseEnter = (index: number) => {
+  const handleMouseEnter = (
+    index: number,
+    element: HTMLElement
+  ) => {
     setHoveredIcon(index);
-    updateTooltipPosition(index);
+    updateTooltipPosition(element);
   };
 
   const handleMouseLeave = () => {
@@ -753,14 +753,17 @@ export default function Skills() {
         <AnimatePresence>
           {positions.map((pos, index) => {
             const skill = activeIcons[index];
-
+            
             if (!skill) return null;
+
+            const iconKey = `${activeCategory}-${skill.name}`;
 
             return (
               <motion.div
-                key={`${activeCategory}-${skill.name}`}
+                key={iconKey}
                 ref={(element) => {
-                  iconRefs.current[index] = element;
+                  if (element) iconRefs.current.set(iconKey, element);
+                  else iconRefs.current.delete(iconKey);
                 }}
                 className="absolute"
                 style={{
@@ -769,12 +772,9 @@ export default function Skills() {
                   transform: "translate(-50%, -50%)",
                   zIndex: hoveredIcon === index ? 1000 : 1,
                 }}
-                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseEnter={(e) => handleMouseEnter(index, e.currentTarget)}
                 onMouseLeave={handleMouseLeave}
-                onTouchStart={() => {
-                  setHoveredIcon(index);
-                  updateTooltipPosition(index);
-                }}
+                onTouchStart={(e) => handleMouseEnter(index, e.currentTarget)}
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0, opacity: 0 }}

@@ -7,12 +7,20 @@ interface SectionHeaderProps {
 export const SectionHeader: React.FC<SectionHeaderProps> = ({ title }) => {
     return (
         <div className="w-full flex flex-col items-center justify-center overflow-hidden rounded-md mb-10">
-            <div className="w-[45rem] h-20 md:h-40 relative">
+            <div className="w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-[45rem] xl:max-w-[60rem] h-20 md:h-28 lg:h-40 relative">
                 {/* Gradients */}
-                <div className="absolute inset-x-20 bottom-0 z-1000 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
-                <div className="absolute inset-x-20 bottom-0 z-1000 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-                <div className="absolute inset-x-60 bottom-0 z-1000 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
-                <div className="absolute inset-x-60 bottom-0 z-1000 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+                <div
+                    aria-hidden="true"
+                    className="absolute inset-x-[10%] md:inset-x-[15%] bottom-0 h-[2px] bg-gradient-to-r from-transparent via-[#A855F7] to-transparent opacity-80 blur-[3px]"
+                />
+                <div
+                    aria-hidden="true"
+                    className="absolute inset-x-[10%] md:inset-x-[15%] bottom-0 h-px bg-gradient-to-r from-transparent via-[#6366F1] to-transparent"
+                />
+                <div
+                    aria-hidden="true"
+                    className="absolute bottom-0 left-1/2 h-px w-1/3 md:w-1/4 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#A855F7] to-transparent"
+                />
 
                 {/* Core component */}
                 <div className="relative w-full h-full">

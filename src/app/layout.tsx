@@ -21,7 +21,6 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico" },
-      { url: "/icon.png", type: "image/png" },
     ],
   },
 };
@@ -32,16 +31,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
+    <html lang="it" className="dark" style={{ colorScheme: "dark" }}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
       >
         {children}
-      </body>
 
-      <CookieConsent />
-      <CookieSettingsButton />
-      <GoogleAnalytics gaId="G-RS1WFH0WRX" />
+        <CookieConsent />
+        <CookieSettingsButton />
+        <GoogleAnalytics gaId="G-RS1WFH0WRX" />
+      </body>
     </html>
   );
 }

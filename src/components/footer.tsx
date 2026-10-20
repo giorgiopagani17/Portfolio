@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { IconBrandGithub, IconBrandLinkedin, IconMailFilled } from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandLinkedin, IconMailFilled, IconBrandNpm } from "@tabler/icons-react";
 
 export const Footer = () => {
   const openCookieSettings = () => {
@@ -38,6 +38,15 @@ export const Footer = () => {
 
           <div className="flex space-x-6">
             <a
+              href="https://www.linkedin.com/in/giorgio-pagani-5ab4b42b1/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-400 hover:text-white transition-colors"
+              aria-label="LinkedIn"
+            >
+              <IconBrandLinkedin className="w-6 h-6" />
+            </a>
+            <a
               href="https://github.com/giorgiopagani17"
               target="_blank"
               rel="noopener noreferrer"
@@ -47,13 +56,13 @@ export const Footer = () => {
               <IconBrandGithub className="w-6 h-6" />
             </a>
             <a
-              href="https://www.linkedin.com/in/giorgio-pagani-5ab4b42b1/"
+              href="https://www.npmjs.com/~giorgio.pagani"
               target="_blank"
               rel="noopener noreferrer"
               className="text-neutral-400 hover:text-white transition-colors"
-              aria-label="LinkedIn"
+              aria-label="npm"
             >
-              <IconBrandLinkedin className="w-6 h-6" />
+              <IconBrandNpm className="w-6 h-6" />
             </a>
             <a
               href="mailto:giorgio.pagani2003@gmail.com"

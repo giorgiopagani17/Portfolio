@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { IconBrandGithub, IconBrandLinkedin, IconMailFilled, IconMenu2 } from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandLinkedin, IconMailFilled, IconMenu2, IconBrandNpm } from "@tabler/icons-react";
 
 export const FloatingDock = ({
    className,
@@ -11,7 +11,6 @@ export const FloatingDock = ({
  }: {
   className?: string;
   mobileClassName?: string;
-  items: Array<{title: string; icon: React.ReactNode; href: string;}>;
 }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -28,6 +27,13 @@ export const FloatingDock = ({
 
   const socialIcons = [
     {
+      title: "LinkedIn",
+      tooltip: "Connect with me on LinkedIn",
+      icon: <IconBrandLinkedin className="w-full h-full" />,
+      href: "https://www.linkedin.com/in/giorgio-pagani-5ab4b42b1/",
+      isDownload: false,
+    },
+    {
       title: "GitHub",
       tooltip: "Visit my GitHub profile",
       icon: <IconBrandGithub className="w-full h-full" />,
@@ -35,10 +41,10 @@ export const FloatingDock = ({
       isDownload: false,
     },
     {
-      title: "LinkedIn",
-      tooltip: "Connect with me on LinkedIn",
-      icon: <IconBrandLinkedin className="w-full h-full" />,
-      href: "https://www.linkedin.com/in/giorgio-pagani-5ab4b42b1/",
+      title: "npm",
+      tooltip: "Visit my npm profile",
+      icon: <IconBrandNpm className="w-full h-full" />,
+      href: "https://www.npmjs.com/~giorgio.pagani",
       isDownload: false,
     },
     {
