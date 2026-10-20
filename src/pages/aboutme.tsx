@@ -50,8 +50,8 @@ export default function AboutMe() {
     }
 
     return (
-        <>
-            <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
+        <div className="flex flex-col items-center justify-center">
+            <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2 mx-auto w-full max-w-7xl">
                 <GridItem
                     area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
                     icon={<Brain className="h-4 w-4 text-neutral-400" />}
@@ -87,6 +87,6 @@ export default function AboutMe() {
                     description="I have successfully completed 3 major projects and managed 2 NPM libraries, demonstrating my technical skills and ability to achieve complex goals. Scroll down to see them!"
                 />
             </ul>
-        </>
+        </div>
     );
 }
